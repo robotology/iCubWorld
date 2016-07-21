@@ -1,11 +1,667 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  
+ 
+    
+    <head>
+     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>iCubWorld</title>
+        
+        <link rel="icon" type="image/png" href="/assets/icubworld_logo.png">
+        
+    <link rel="import" href="/bower_components/paper-styles/typography.html">
+    <link rel="import" href="/bower_components/paper-styles/default-theme.html">
+
+        
+    <!-- import latest release version of all components from polygit -->
+<!--    <base href="">-->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    
+
+    <link rel="import" href="/bower_components/iron-media-query/iron-media-query.html">
+
+    <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+        
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+
+    <link rel="import" href="/bower_components/paper-card/paper-card.html">
+
+        
+    <link rel="import" href="/bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+        
+    <link rel="import" href="/bower_components/app-layout/app-header/app-header.html">
+    
+    <link rel="import" href="/bower_components/app-layout/app-layout.html">
+        
+    <link rel="import" href="/bower_components/app-layout/app-header-layout/app-header-layout.html">
+        
+    <link rel="import" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+        
+    <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="/bower_components/paper-tabs/paper-tab.html">
+
+        
+        
+    <link rel="import" href="/bower_components/google-youtube/google-youtube.html">
+
+        
+        
+    <!-- sample-content included for demo purposes only -->
+    <link rel="import" href="/bower_components/app-layout/demo/sample-content.html">
+
+    <link rel="import" href="styles.html">
+    <style is="custom-style" include="shared-styles"></style>
+        
+        
+        
+        
+        
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+
+        
+    <link rel="import" href="/bower_components/paper-material/paper-material.html">
+        
+    <link rel="stylesheet" type="text/css" href="icubworld.css">
+
   </head>
-  
-  <body>
-    <h1>Welcome to iCubWorld!</h1>
+    
+    
+  <body class="fullbleed" unresolved>
+   
+            
+      
+     <app-header-layout>
+      
+      
+        <app-header class='back' fixed condenses effects="blend-background parallax-background">
+            
+          <app-toolbar sticky>
+          </app-toolbar>
+            <app-toolbar class='title'>
+                <h1>iCubWorld</h1>
+            </app-toolbar>
+        </app-header>
+      
+         <div id='home'></div>
+      
+        <app-header class='front' fixed condenses effects="waterfall">            
+          <app-toolbar>
+            <a  class='page-scroll' href='#home'>
+<!--                <paper-icon-button icon="menu"></paper-icon-button>-->
+                <iron-icon class='icubworld-logo' src="/assets/icubworld_logo.png"></iron-icon>  
+            </a>
+            
+            <h4>iCubWorld</h4>
+<!--
+              
+            <a href='/'><h4>About</h4></a>
+            <a href='/'><h4>Acquisition</h4></a>
+            <a href='/'><h4>Datasets</h4></a>
+            <a href='/'><h4>Publication</h4></a>
+            <a href='/'><h4>People</h4></a>
+              
+-->
+
+        <paper-tabs class='navbar-fixed-top' selected='-1' no-bar>
+          <paper-tab link>
+            <a class='page-scroll' href="#about" tabindex="-1">About</a>
+          </paper-tab>
+          <paper-tab link>
+            <a class='page-scroll' href="#acquisition" tabindex="-1">Acquisition</a>
+          </paper-tab>
+          <paper-tab link>
+            <a class='page-scroll' href="#datasets" tabindex="-1">Datasets</a>
+          </paper-tab>
+          <paper-tab link>
+            <a class='page-scroll' href="#publications" tabindex="-1">Publications</a>
+          </paper-tab>
+          <paper-tab link>
+            <a class='page-scroll' href="#people" tabindex="-1">People</a>
+          </paper-tab>
+        </paper-tabs>
+
+          </app-toolbar>
+        </app-header>
+      
+      
+<!--        <div content>  -->
+            <section id='about'>
+                <h1>A Dataset for Vision in Robotics</h1>
+                
+                <p>
+                    Lorem ipsum dolor sit amet, laoreet vitae eget aenean viverra in nunc. Lorem commodo et curae tempus duis sit, massa sociosqu nunc blandit, euismod curabitur massa et in, vel erat faucibus justo imperdiet, mollis venenatis erat nulla. Vitae arcu egestas id. Ad eleifend duis. Vulputate integer et mauris nulla. Risus libero, vestibulum tristique aenean consectetuer a vestibulum sed, venenatis curabitur donec et sit cursus suspendisse, volutpat proin ultrices.
+                </p>
+                
+         </section>
+            
+         <section id='acquisition'>
+
+                <div class="container">
+                    <div class='flexchild'>
+                        <paper-card class='white' heading="Acquisition Setup" image="/assets/acquisition_setup.jpg">
+                          <div class="card-content">Example of an acquisition session: the human teacher shows an object to the robot while providing verbal annotation.</div>
+                          <div class="card-actions">
+                            <a href='http://www.youtube.com/watch?v=vhPLUNg9r5k'>
+                                <paper-button>
+                                    <iron-icon icon="icons:file-download"></iron-icon>  
+                                </paper-button>
+                            </a>
+                            Watch the video!
+                          </div>
+                        </paper-card>
+                    </div>
+                    
+                    <div class='flexchild'>
+<!--
+                        <h3>Acquisition</h3>
+                        
+                        <p>
+                            
+                        </p>
+-->
+                    <paper-card class='acquisition' elevation='0'>
+                          <div class="card-content">
+                              <div class='title'>Acquisition</div>
+                              <div class='paragraph'>
+                                  We developed a Human-Robot-Interaction (HRI) schema whereby the iCub can label images automatically exploiting self-supervision by either using knowledge of its own kinematics or visual motion cues. This knowledge provides a prior on the object location in the images which allows selecting a simple but reliable region of interest for further processing. We collect data in two modalities: human mode and robot mode.    
+                              </div>
+                            
+                          </div>
+<!--
+                          <div class="card-actions">
+                            <paper-button>Some action</paper-button>
+                          </div>
+-->
+                     </paper-card>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                
+<!--                <sample-content size="10"></sample-content>-->
+                
+            </section>
+<!--        </div>-->
+         
+                   
+                   
+         
+         
+            <section id='datasets'>
+                <h1>Datasets</h1>
+         
+                <p>iCubWorld is an ongoing project.</p>
+         
+                <div class="container">
+                    <div class='flexchild'>
+                     <paper-card heading="iCubWorld28" image="/assets/icubworld28-transparent.png">
+                         <div class="card-content">
+                             This release comprises 28 objects divided into 7 categories, acquired in human mode (see definition above) on four different days (Day1, ..., Day4). The four acquisitions differ only for little changes in the environment (e.g., same room but different light) due to the fact that we performed them on separate days.
+                         </div>
+                          <div class="card-actions">
+                            <a download href='http://www.icub.org/download/datasets/iCubWorld28_20150708.zip'>
+                                <paper-button>
+                                    <iron-icon icon="icons:file-download"></iron-icon>  
+                                </paper-button>
+                            </a>
+                            <a download href=''>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                        </paper-card>                    
+                    </div>
+                     <div class='flexchild'>
+                     <paper-card heading="iCubWorld 1.0" image="/assets/icubworld-small-transparent.png">
+                          <div class="card-content">
+                              10 categories, 40 objects acquired in human mode (see definition above) for the training phase. Data for the testing phase have been collected both in human and robot mode. The acquisition size is 640x480 and subsequently cropped to the bounding box of the object according to the kinematics or motion cue. The bounding box is 160x160 in humand mode and320x320 in robot mode.
+                         </div>
+                          <div class="card-actions">
+                            <a download href='http://www.icub.org/download/datasets/iCubWorld28_20150708.zip'>
+                                <paper-button>
+                                    <iron-icon icon="icons:file-download"></iron-icon>  
+                                </paper-button>
+                            </a>
+                            <a download href=''>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                        </paper-card>                    
+                    </div>
+                     <div class='flexchild'>
+                     <paper-card heading="Hello iCubWorld" image="/assets/hello-icubworld-transparent.png">
+                          <div class="card-content">
+                              This is the first release of the iCubWorld dataset. It consists of seven instances of objects acquired in the two different modalities: human and robot as defined earlier. The size of the images is 320x240 subsequently cropped to the bounding box size according to the following:
+                         </div>
+                          <div class="card-actions">
+                            <a download href='http://www.icub.org/download/datasets/iCubWorld28_20150708.zip'>
+                                <paper-button>
+                                    <iron-icon icon="icons:file-download"></iron-icon>  
+                                </paper-button>
+                            </a>
+                            <a download href=''>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                        </paper-card>                    
+                    </div>
+                    
+                        <div class='flexchild'></div>
+                        <div class='flexchild'></div>
+                        <div class='flexchild'></div>
+                </div>         
+                
+                
+            </section>
+         
+            <section id='publications'>
+         
+                <h1>Publications</h1>
+            
+                <p>
+                    A list of publications related to iCubWorld.
+                </p>
+                
+                <div class='container'>
+                    
+                     <paper-card>
+                          <div class="card-content">
+                            <div class='title'>Learning Objects from Few Examples by Improving the Invariance of a Deep Convolutional Learning Network</div>
+                              <div class='authors'>
+                                Giulia Pasquale, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale
+                            </div>
+                            <div class='venue'>
+                                IROS 2016 - IEEE/RSJ International Conference on Intelligent Robots and Systems  
+                            </div>   
+                         </div>
+                          <div class="card-actions">
+                            <a target='_blank' href=''>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                    </paper-card>
+                    
+                    <paper-card>
+                          <div class="card-content">
+                              <div class='title'>Teaching iCub to recognize objects using deep Convolutional Neural Networks</div>
+                              <div class='authors'>
+                                Giulia Pasquale, Carlo Ciliberto, Francesca Odone, Lorenzo Rosasco and Lorenzo Natale
+                            </div>
+                         </div>
+                          <div class="card-actions">
+                            <a target='_blank' href='https://arxiv.org/abs/1504.03154'>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                    </paper-card>
+                    
+                    <paper-card>
+                          <div class="card-content">
+                              <div class='title'>On the impact of learning hierarchical representations for visual recognition in robotics</div>
+                              <div class='authors'>
+                                Carlo Ciliberto, Sean Ryan Fanello, Matteo Santoro, Lorenzo Natale, Giorgio Metta, Lorenzo Rosasco
+                            </div>
+                            <div class='venue'>
+                                IROS 2013 - IEEE/RSJ International Conference on Intelligent Robots and Systems
+                            </div>
+                         </div>
+                          <div class="card-actions">
+                            <a target='_blank' href='http://pasa.lira.dist.unige.it/pasapdf/1330_Ciliberto_etal2013.pdf'>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                    </paper-card>
+                    
+                    
+                    <paper-card>
+                          <div class="card-content">
+                              <div class='title'>iCub World: Friendly Robots Help Building Good Vision Data-Sets</div>
+                              <div class='authors'>
+                                Sean Ryan Fanello, Carlo Ciliberto, Matteo Santoro,  Lorenzo Natale, Giorgio Metta, Lorenzo Rosasco and Francesca Odone
+                            </div>
+                            <div class='venue'>
+                                CVPR 2013 - Proceedings of IEEE Conference on Computer Vision and Pattern Recognition Workshops.
+                            </div>
+                         </div>
+                          <div class="card-actions">
+                            <a target='_blank' href='https://arxiv.org/abs/1306.3560'>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                    </paper-card>           
+                    
+                    <paper-card hesading="iCub World: Friendly Robots Help Building Good Vision Data-Sets">
+                          <div class="card-content">
+                              <div class='title'>Weakly Supervised Strategies for Natural Object Recognition in Robotics</div>
+                              <div class='authors'>
+                                Sean Ryan Fanello, Carlo Ciliberto, Lorenzo Rosasco and Giorgio Metta
+                            </div>
+                            <div class='venue'>
+                                ICRA 2013 - IEEE International Conference on Robotics and Automation.
+                            </div>
+                         </div>
+                          <div class="card-actions">
+                            <a download href=''>
+                                <paper-button>
+                                    <iron-icon icon="icons:description"></iron-icon>  
+                                </paper-button>
+                            </a>
+                          </div>
+                    </paper-card>           
+
+                    
+                </div>
+         
+            </section>
+         
+            <section id='people'>
+                
+                <h1>People</h1>
+         
+                <p>
+                    The list of people who have contributed to the iCubWorld project.
+                </p>
+         
+                 <div class='container'>
+                    
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/giulia.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Giulia Pasquale</div>
+                                  <div class='position'>
+                                      PhD Student
+                                </div>
+                                <div class='affiliation'>
+                                    Istituto Italiano di Tecnologia
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='https://www.iit.it/people/giulia-pasquale'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/carlo.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Carlo Ciliberto</div>
+                                  <div class='position'>
+                                      Post Doc
+                                </div>
+                                <div class='affiliation'>
+                                    IIT and MIT
+                                    <br> &nbsp;
+                                
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='https://scholar.google.com/citations?user=XUcUAisAAAAJ&hl=en&oi=ao'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     
+                     
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/sean.jpeg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Sean Ryan Fanello</div>
+                                  <div class='position'>
+                                      Researcher
+                                </div>
+                                <div class='affiliation'>
+                                    Perceptive.io 
+                                    <br> &nbsp;
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='http://www.seanfanello.it/'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/metta.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Giorgio Metta</div>
+                                  <div class='position'>
+                                      Deputy Director
+                                </div>
+                                <div class='affiliation'>
+                                    Istituto Italiano di Tecnologia
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='https://www.iit.it/people/giorgio-metta'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/francesca.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Francesca Odone</div>
+                                  <div class='position'>
+                                      Professor
+                                </div>
+                                <div class='affiliation'>
+                                    Università degli Studi di Genova
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='http://www.disi.unige.it/person/OdoneF/'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/nat.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Lorenzo Natale</div>
+                                  <div class='position'>
+                                      Team Leader
+                                </div>
+                                <div class='affiliation'>
+                                    Istituto Italiano di Tecnologia
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='http://lornat75.github.io/'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/lorenzo.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Lorenzo Rosasco</div>
+                                  <div class='position'>
+                                      Professor
+                                </div>
+                                <div class='affiliation'>
+                                    Unige, IIT and MIT
+                                    <br> &nbsp;
+                                    
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='http://web.mit.edu/lrosasco/www/'>
+                                    <paper-button>
+                                        <iron-icon icon="icons:account-circle"></iron-icon>  
+                                    </paper-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+                     
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                </div>
+
+                
+            </section>
+         <footer>
+            &copy; iCubWorld
+         </footer>
+         
+         
+         
+    </app-header-layout>
+
+      
+      
+       <script src="js/jquery.js"></script>
+       <script src="js/jquery-easing-1.3.js"></script>
+
+      <!-- Custom Theme JavaScript -->
+    <script src="js/icubworld.js"></script>
+      
+      
+      
+      <script>
+        document.addEventListener('WebComponentsReady', function() {
+        
+        var about_anchor = $('section#about').offset().top;
+
+        var acquisition_anchor = $('section#acquisition').offset().top;
+
+        var datasets_anchor = $('section#datasets').offset().top;
+
+        var publications_anchor = $('section#publications').offset().top;
+
+        var people_anchor = $('section#people').offset().top;
+      });
+          var tabs = document.querySelector('paper-tabs');
+
+
+
+        var about_anchor = $('section#about').offset().top;
+
+        var acquisition_anchor = $('section#acquisition').offset().top;
+
+        var datasets_anchor = $('section#datasets').offset().top;
+
+        var publications_anchor = $('section#publications').offset().top;
+
+        var people_anchor = $('section#people').offset().top;
+
+
+        $(window).on('scroll', function() {
+        //    console.log($(window).scrollTop());
+        //    console.log('about_anchor'+about_anchor);
+        //    console.log('acquisition_anchor'+acquisition_anchor);
+        //    console.log('datasets_anchor'+datasets_anchor);
+        //    console.log('publications_anchor'+publications_anchor);
+        //    console.log('people_anchor'+people_anchor);
+
+            if ( $(window).scrollTop() < about_anchor ) 
+                tabs.selected = '-1';
+            else if ( $(window).scrollTop() < acquisition_anchor ) 
+                tabs.selected = '0';
+            else if ( $(window).scrollTop() < datasets_anchor ) 
+                tabs.selected = '1';
+            else if ( $(window).scrollTop() < publications_anchor ) 
+                tabs.selected = '2';
+            else if ( $(window).scrollTop() < people_anchor ) 
+                tabs.selected = '3';
+            else
+                tabs.selected = '4';
+
+        });
+          
+      </script>
   </body>
-  
+    
+    
+    
+    
 </html>
 

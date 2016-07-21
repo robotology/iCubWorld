@@ -1,0 +1,77 @@
+   
+.container {
+    
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+    
+        
+.container .flexchild {
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+     min-width: 60%;
+     
+     margin-bottom: 4em;
+     margin-left: 2em;
+     margin-right: 2em;
+
+ }
+
+
+#acquisition .container {
+ flex-wrap:wrap-reverse;   
+}
+
+@media (min-width: 600px) {
+ #acquisition .container .flexchild {
+        min-width: 30%;   
+ }
+}
+
+
+@media (min-width: 600px) {
+ #datasets .container .flexchild {
+        min-width: 30%;
+     
+ }
+}
+
+@media (min-width: 1100px) {
+  #datasets .container .flexchild {
+      min-width: 30%;
+      
+  }
+}
+
+
+
+
+@media (min-width: 550px) {
+    #people .container .flexchild {
+        min-width: 30%;
+     
+ }
+}
+
+@media (min-width: 800px) {
+    #people .container .flexchild {
+      min-width: 25%;
+      
+  }
+}
+
+
+@media (min-width: 800px) {
+    #people .container .flexchild {
+      min-width: 20%;
+      
+  }
+}
+
+
