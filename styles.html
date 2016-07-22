@@ -17,6 +17,15 @@
               @apply(--paper-font-common-base);
             
           }
+         
+          
+          
+          paper-icon-button {
+                            
+              --iron-icon-fill-color: cornflowerblue;
+          
+          }
+          
           
           #home {
             position:absolute;
@@ -24,6 +33,7 @@
               
           }
           
+        
           app-toolbar {
             /* Toolbar is the main header, so give it some color */
     /*        background-color: #1E88E5;*/
@@ -90,7 +100,7 @@
           
           app-header.back {
                --app-header-background-front-layer: {
-                background-image: url(/iCubWorld/assets/icubworld-landing.jpg);
+                background-image: url(/iCubWorld/assets/icubworld-landing.png );
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -141,13 +151,16 @@
               
               
 
+        #about {
+            padding-top:3em;
+        }
 
         section{
 /*            position: relative;*/
 
             text-align: centser;
-            padding-top:3em;
-            padding-bottom: 2em;
+/*            padding-top:3em;*/
+/*            padding-bottom: 2em;*/
 
             width: 100%;
             min-height: 100%;
@@ -228,17 +241,26 @@
         paper-card.white {
           --paper-card-header-color: #fff;   
         }
-          
+           
+        #acquisition .title {
+            font-size: @apply(--paper-font-title);
+            margin-bottom: 0.5em;
+        }
+            
+            
             
         #datasets paper-card {
             margin-left: 1em;
             margin-right: 1em;   
         }
             
-        #acquisition .title {
-            font-size: @apply(--paper-font-title);
-            margin-bottom: 0.5em;
+            
+        #datasets .paragraph {
+            overflow: hidden;
+            height: 14em;
         }
+            
+           
          
             
        
@@ -260,6 +282,9 @@
             color: var(--paper-grey-600);
         }
             
+        #publications paper-card:hover {
+            background-color: var(--paper-amber-100);
+        }
             
 
 
@@ -285,9 +310,15 @@
         color: var(--paper-grey-600);
         margin-bottom: 0.5em;
     }
+            
+    .affiliation {
+        height: 3em;
+        overflow: hidden;
+    }
       
     #people paper-card {
         height: 100%;   
+        width: 100%;
     }
 
             
