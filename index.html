@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
  
-    
     <head>
-     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
         
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title>iCubWorld</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>iCubWorld</title>
     <!-- import latest release version of all components from polygit -->
     <!-- <base href="iCubWorld"> -->
     
@@ -121,6 +121,9 @@
           <paper-tab link>
             <a class='page-scroll' href="#people" tabindex="-1">People</a>
           </paper-tab>
+          <paper-tab link>
+            <a class='page-scroll' href="#credits" tabindex="-1">Credits</a>
+          </paper-tab>
         </paper-tabs>
 
           </app-toolbar>
@@ -132,7 +135,14 @@
                 <h1>Welcome to iCubWorld!</h1>
                 
                 <p>
-                    Lorem ipsum dolor sit amet, laoreet vitae eget aenean viverra in nunc. Lorem commodo et curae tempus duis sit, massa sociosqu nunc blandit, euismod curabitur massa et in, vel erat faucibus justo imperdiet, mollis venenatis erat nulla. Vitae arcu egestas id. Ad eleifend duis. Vulputate integer et mauris nulla. Risus libero, vestibulum tristique aenean consectetuer a vestibulum sed, venenatis curabitur donec et sit cursus suspendisse, volutpat proin ultrices.
+                <b>How many objects can iCub recognize? </b>
+                This question led us in 2013 to start the iCubWorld project, with the main goal of benchmarking the development of the visual recognition capabilities of the iCub robot. The project is the result of a collaboration between the <a href="https://www.iit.it/lines/humanoid-sensing-and-perception">Istituto Italiano di Tecnologia (IIT) - iCub Facility</a>, the <a href="http://slipguru.unige.it/">University of Genoa - SlipGURU</a> research group, and the <a href="http://lcsl.mit.edu/#/home">Laboratory for Computational and Statistical Learning</a>. 
+                </p>
+                <p>
+                    iCubWorld datasets are collections of images recording the visual experience of iCub while observing objects in its typical environment, a laboratory or an office. The acquisition settings are devised to allow a natural human-robot interaction, where a teacher verbally provides the label of the object of interest and shows it to the robot, by holding it in the hand; the iCub can either track the object while the teacher moves it, or explore it by itself taking it in its hand.
+                </p>
+                <p>
+                    Since 2013, we published four iCubWorld releases of increasing size (described in detail below), aimed at investigating complementary aspects of robotic visual recognition. Indeed, these image collections allow for extensive analysis of the behaviour of recognition systems when trained in different conditions, offering a faithful and reproducible benchmark for the performance that we can expect from the real system.
                 </p>
                 
          </section>
@@ -140,20 +150,19 @@
          <section id='acquisition'>
 
                 <div class="container">
-                    <div class='flexchild'>
-                        <paper-card class='white' heading="Acquisition Setup" image="/iCubWorld/assets/acquisition_setup.jpg">
-                          <div class="card-content">Example of an acquisition session: the human teacher shows an object to the robot while providing verbal annotation.</div>
-                          <div class="card-actions">
-                            <a href='http://www.youtube.com/watch?v=vhPLUNg9r5k'>
-                                <paper-icon-button icon='file-download'>
-                                </paper-icon-button>
-                            </a>
-                            Watch the video!
-                          </div>
-                        </paper-card>
-                    </div>
-                    
-                    <div class='flexchild'>
+                  <div class='flexchild'>
+                    <paper-card class='white' heading="Acquisition Setup" image="/iCubWorld/assets/acquisition_setup.jpg">
+                      <div class="card-content">Example of acquisition session: a human teacher shows an object to the robot while providing verbal annotation.</div>
+                        <div class="card-actions">
+                          <a href='http://www.youtube.com/watch?v=vhPLUNg9r5k'>
+                            <paper-icon-button icon='file-download'>
+                            </paper-icon-button>
+                          </a>
+                          Watch the video!
+                        </div>
+                    </paper-card>
+                  </div>
+                <div class='flexchild'>
 <!--
                         <h3>Acquisition</h3>
                         
@@ -161,14 +170,29 @@
                             
                         </p>
 -->
-                    <paper-card class='acquisition' elevation='0'>
-                          <div class="card-content">
-                              <div class='title'>Acquisition</div>
-                              <div class='paragraph'>
-                                  We developed a Human-Robot-Interaction (HRI) schema whereby the iCub can label images automatically exploiting self-supervision by either using knowledge of its own kinematics or visual motion cues. This knowledge provides a prior on the object location in the images which allows selecting a simple but reliable region of interest for further processing. We collect data in two modalities: human mode and robot mode.    
-                              </div>
-                            
-                          </div>
+                <paper-card class='acquisition' elevation='0'>
+                  <div class="card-content">
+                    <div class='title'>Acquisition</div>
+                    <div class='paragraph'>
+
+                              <p>
+                                  Images comprising iCubWorld datasets are annotated with the label of the object represented and a bounding box around it.
+                                  We developed a Human-Robot-Interaction (HRI) application to acquire annotated images by exploiting the real-world robotic context. This schema allows to build large annotated datasets in a fast and natural way.
+                              </p>
+
+                              <p>
+                                  The only external supervision is in the form of a human teacher providing verbally the label of the object that is going to be acquired. The teacher approaches the robot and shows the object in his/her hand; during the acquisition, localization of the object in the visual field of the robot is performed by exploting self-supervision techniques. 
+                              </p>
+                              <p>
+                                  Two acquisition modalities are possible: human or robot mode. In human mode, the teacher moves the object holding it in the hand and the robot tracks it by exploiting either motion or depth cues. In robot mode, the robot takes the object in the hand and focuses on it by using knowledge of its own kinematics. We record incoming frames from the robot cameras, togheter with the information on the approximate bounding box, for a fixed time period.
+                              </p>
+
+                              <p>
+                                  More detailed information on the acquisition setup can be found in our related publications.
+                              </p>
+
+                    </div>     
+                  </div>
 <!--
                           <div class="card-actions">
                             <paper-button>Some action</paper-button>
@@ -194,14 +218,59 @@
             <section id='datasets'>
                 <h1>Datasets</h1>
          
-                <p>iCubWorld is an ongoing project.</p>
+                <p>iCubWorld is an ongoing project. Latest release is iCubWorld - Transformations.</p>
          
                 <div class="container">
+
+                  <div class='flexchild'>
+                    <paper-card heading="iCubWorld - Transformations" image="/iCubWorld/assets/icubworld_horizontal.png">
+                      <div class="card-content">
+                        <div class='paragraph'>
+
+                          <ul type="square">
+                            <li>No. objects: 150 </li>
+                            <li>No. of categories: 15 (10 obj/cat)</li>
+                            <li>No. acquisitions per obj: 10 (visual transformations, days)</li>
+                            <li>Acquisition mode: human</li>
+                            <li>Segmentation cue: depth</li>
+                            <li>Whole image available: yes</li>
+                            <li>Acquired camera: left, right</li>
+                          </ul>
+
+                          This dataset is far larger and more articulated than previous releases: beyond comprising more objects and categories, each object has been acquired while undergoing five visual transformations, in two different days. The main motivation is to provide a sufficiently large benchmark for studying how fine-tuning latest deep Convolutional Neural Networks on typical images acquired in robotics settings, and containing strong visual nuisances, affects the invariance properties gained by training on wide web data collections.
+
+                        </div>
+                      </div>
+                      <div class="card-actions">
+                        <a download href='https://data.mendeley.com/datasets/8r8pmpnpwb/draft?a=5cd13f45-5342-45f1-a113-bfda9389a9b1'>
+                          <paper-icon-button icon="icons:file-download"></paper-icon-button>
+                        </a>
+                        <a download href=''>
+                          <paper-icon-button icon="icons:description"></paper-icon-button>
+                        </a>
+                      </div>
+                    </paper-card>                    
+                  </div>
+
+
+
                     <div class='flexchild'>
-                     <paper-card heading="iCubWorld28" image="/iCubWorld/assets/icubworld28-transparent.png">
+                        <paper-card heading="iCubWorld28" image="/iCubWorld/assets/icubworld28-transparent.png">
                          <div class="card-content">
                              <div class='paragraph'>
-                                This release comprises 28 objects divided into 7 categories, acquired in human mode (see definition above) on four different days (Day1, ..., Day4). The four acquisitions differ only for little changes in the environment (e.g., same room but different light) due to the fact that we performed them on separate days.
+                              
+                              <ul type="square">
+                                <li>No. objects: 28 </li>
+                                <li>No. of categories: 7 (4 obj/cat)</li>
+                                <li>No. acquisitions per obj: 4 (days)</li>
+                                <li>Acquisition mode: human</li>
+                                <li>Segmentation cue: motion</li>
+                                <li>Whole image available: yes</li>
+                                <li>Acquired camera: left</li>
+                              </ul>
+
+                              The peculiarity of this dataset is that each object has been acquired on four different days: the four acquisitions differ for little changes in the environment (e.g., same room but different light). This allows for studying incremental learning techniques where the knowledge of objects can be refined with experience gained while observing them in different conditions.
+
                              </div>
                          </div>
                           <div class="card-actions">
@@ -214,11 +283,24 @@
                           </div>
                         </paper-card>                    
                     </div>
+
                      <div class='flexchild'>
-                     <paper-card heading="iCubWorld 1.0" image="/iCubWorld/assets/icubworld-small-transparent.png">
+                     <paper-card heading="iCubWorld 1.0" image="assets/icubworld-small-transparent.png">
                           <div class="card-content">
                               <div class='paragraph'>
-                                  10 categories, 40 objects acquired in human mode (see definition above) for the training phase. Data for the testing phase have been collected both in human and robot mode. The acquisition size is 640x480 and subsequently cropped to the bounding box of the object according to the kinematics or motion cue. The bounding box is 160x160 in humand mode and320x320 in robot mode.
+
+                              <ul type="square">
+                                <li>No. objects: 40 </li>
+                                <li>No. of categories: 10 (4 obj/cat)</li>
+                                <li>No. acquisitions per obj: 1</li>
+                                <li>Acquisition mode: human (train), both (test)</li>
+                                <li>Segmentation cue: motion</li>
+                                <li>Whole image available: no</li>
+                                <li>Acquired camera: left</li>
+                              </ul>
+
+                              This release has been devised in order to allow for testing generalization properties of recognition methods from one setting to another. Indeed, while the training set has beeen acquired in human mode, the test set is available in both modes and with different human operators.
+
                               </div>
                          </div>
                           <div class="card-actions">
@@ -235,7 +317,19 @@
                      <paper-card heading="Hello iCubWorld" image="/iCubWorld/assets/hello-icubworld-transparent.png">
                           <div class="card-content">
                               <div class='paragraph'>
-                                  This is the first release of the iCubWorld dataset. It consists of seven instances of objects acquired in the two different modalities: human and robot as defined earlier. The size of the images is 320x240 subsequently cropped to the bounding box size according to the following:
+
+                              <ul type="square">
+                                <li>No. objects: 7 </li>
+                                <li>No. of categories: 7 (1 obj/cat)</li>
+                                <li>No. acquisitions per obj: 1</li>
+                                <li>Acquisition mode: both</li>
+                                <li>Segmentation cue: motion</li>
+                                <li>Whole image available: no</li>
+                                <li>Acquired camera: left</li>
+                              </ul>
+
+                              This is the first release of iCubWorld, where we present first the developed HRI acquisition setting and perform initial benchamrking of the recognition methods employed on the iCub platform at the time.
+
                               </div>
                          </div>
                           <div class="card-actions">
@@ -269,12 +363,12 @@
                     
                      <paper-card>
                           <div class="card-content">
-                            <div class='title'>Learning Objects from Few Examples by Improving the Invariance of a Deep Convolutional Learning Network</div>
+                            <div class='title'>Object Identification from Few Examples by Improving the Invariance of a Deep Convolutional Learning Network</div>
                               <div class='authors'>
                                 Giulia Pasquale, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale
                             </div>
                             <div class='venue'>
-                                IROS 2016 - IEEE/RSJ International Conference on Intelligent Robots and Systems  
+                                IROS 2016 - IEEE/RSJ International Conference on Intelligent Robots and Systems. 
                             </div>   
                          </div>
                           <div class="card-actions">
@@ -289,10 +383,30 @@
                               <div class='title'>Teaching iCub to recognize objects using deep Convolutional Neural Networks</div>
                               <div class='authors'>
                                 Giulia Pasquale, Carlo Ciliberto, Francesca Odone, Lorenzo Rosasco and Lorenzo Natale
-                            </div>
+                              </div>
+                            <div class='venue'>
+                                MLIS 2016 - Workshop on Machine Learning for Interactive Systems, International Conference on Machine Learning (ICML).
+                            </div> 
                          </div>
                           <div class="card-actions">
-                            <a target='_blank' href='https://arxiv.org/abs/1504.03154'>
+                            <a target='_blank' href='http://www.jmlr.org/proceedings/papers/v43/pasquale15'>
+                                <paper-icon-button icon="icons:description"></paper-icon-button>
+                            </a>
+                          </div>
+                    </paper-card>
+
+                    <paper-card>
+                          <div class="card-content">
+                              <div class='title'>Enabling Depth-driven Visual Attention on the iCub Humanoid Robot: Instructions for Use and New Perspectives.</div>
+                              <div class='authors'>
+                                Giulia Pasquale, Tanis Mar, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale 
+                              </div>
+                            <div class='venue'>
+                                Frontiers in Robotics and AI, section Humanoid Robotics, Vol. 3 Num. 35, 2016.
+                            </div> 
+                         </div>
+                          <div class="card-actions">
+                            <a target='_blank' href='http://journal.frontiersin.org/article/10.3389/frobt.2016.00035/full'>
                                 <paper-icon-button icon="icons:description"></paper-icon-button>
                             </a>
                           </div>
@@ -305,7 +419,7 @@
                                 Carlo Ciliberto, Sean Ryan Fanello, Matteo Santoro, Lorenzo Natale, Giorgio Metta, Lorenzo Rosasco
                             </div>
                             <div class='venue'>
-                                IROS 2013 - IEEE/RSJ International Conference on Intelligent Robots and Systems
+                                IROS 2013 - IEEE/RSJ International Conference on Intelligent Robots and Systems.
                             </div>
                          </div>
                           <div class="card-actions">
@@ -360,7 +474,7 @@
                 <h1>People</h1>
          
                 <p>
-                    The list of people who have contributed to the iCubWorld project.
+                    The list of people who have worked on the iCubWorld project.
                 </p>
          
                  <div class='container'>
@@ -443,58 +557,26 @@
                               </div>
                         </paper-card>
                      </div>
-                     
-                     <div class='flexchild'>
-                         <paper-card>
-                             
-                                <div class='person'>
-                                    <img src='assets/people/metta.jpg'/>
+ 
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                    <div class='flexchild'></div>
+                </div>
 
-                                </div>
-                              <div class="card-content">
+                
+            </section>
 
-                                <div class='name'>Giorgio Metta</div>
-                                  <div class='position'>
-                                      Deputy Director
-                                </div>
-                                <div class='affiliation'>
-                                    Istituto Italiano di Tecnologia
-                                </div>   
-                             </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='https://www.iit.it/people/giorgio-metta'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
-                                </a>
-                              </div>
-                        </paper-card>
-                     </div>
-                     
-                     
-                     <div class='flexchild'>
-                         <paper-card>
-                             
-                                <div class='person'>
-                                    <img src='assets/people/francesca.jpg'/>
+<section id='credits'>
+                
+                <h1>Credits</h1>
+         
+                <p>
+                    The list of people who have supported and contributed to the iCubWorld project.
+                </p>
+         
+                 <div class='container'>
 
-                                </div>
-                              <div class="card-content">
-
-                                <div class='name'>Francesca Odone</div>
-                                  <div class='position'>
-                                      Professor
-                                </div>
-                                <div class='affiliation'>
-                                    Università degli Studi di Genova
-                                </div>   
-                             </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='http://www.disi.unige.it/person/OdoneF/'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
-                                </a>
-                              </div>
-                        </paper-card>
-                     </div>
-                     
                      <div class='flexchild'>
                          <paper-card>
                              
@@ -545,7 +627,57 @@
                               </div>
                         </paper-card>
                      </div>
-                     
+           
+                     <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/francesca.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Francesca Odone</div>
+                                  <div class='position'>
+                                      Professor
+                                </div>
+                                <div class='affiliation'>
+                                    Università degli Studi di Genova
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='http://www.disi.unige.it/person/OdoneF/'>
+                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+
+                    <div class='flexchild'>
+                         <paper-card>
+                             
+                                <div class='person'>
+                                    <img src='assets/people/metta.jpg'/>
+
+                                </div>
+                              <div class="card-content">
+
+                                <div class='name'>Giorgio Metta</div>
+                                  <div class='position'>
+                                      Deputy Director
+                                </div>
+                                <div class='affiliation'>
+                                    Istituto Italiano di Tecnologia
+                                </div>   
+                             </div>
+                              <div class="card-actions">
+                                <a target='_blank' href='https://www.iit.it/people/giorgio-metta'>
+                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                                </a>
+                              </div>
+                        </paper-card>
+                     </div>
+
                     <div class='flexchild'></div>
                     <div class='flexchild'></div>
                     <div class='flexchild'></div>
@@ -554,6 +686,8 @@
 
                 
             </section>
+
+
          <footer>
             &copy; iCubWorld
          </footer>
@@ -584,6 +718,9 @@
         var publications_anchor = $('section#publications').offset().top;
 
         var people_anchor = $('section#people').offset().top;
+
+        var credits_anchor = $('section#credits').offset().top;
+
       });
           var tabs = document.querySelector('paper-tabs');
 
@@ -598,6 +735,8 @@
         var publications_anchor = $('section#publications').offset().top;
 
         var people_anchor = $('section#people').offset().top;
+
+        var credits_anchor = $('section#credits').offset().top;
 
 
         $(window).on('scroll', function() {
@@ -618,8 +757,10 @@
                 tabs.selected = '2';
             else if ( $(window).scrollTop() < people_anchor ) 
                 tabs.selected = '3';
-            else
+            else if ( $(window).scrollTop() < credits_anchor ) 
                 tabs.selected = '4';
+            else
+                tabs.selected = '5';
 
         });
           
