@@ -1,0 +1,279 @@
+html {
+  margin: 0;
+  height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  height: 100%; }
+
+a:hover, a:visited {
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 5em;
+  background-color: cornflowerblue;
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em; }
+  header #brand {
+    color: inherit;
+    display: inline-block;
+    height: 100%;
+    line-height: 2.5em;
+    font-size: 2em;
+    font-family: "Poiret One"; }
+  header #brand:before {
+    position: relative;
+    content: ' ';
+    background-image: url(../assets/icubworld_logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.3em;
+    height: 100%;
+    display: inline-block;
+    left: 0;
+    vertical-align: top; }
+  header nav {
+    float: right; }
+    header nav a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      display: inline-block;
+      height: 100%;
+      line-height: 6.25em;
+      font-size: 0.8em;
+      text-align: center;
+      text-transform: uppercase;
+      color: inherit; }
+    header nav a:hover {
+      color: coral; }
+    header nav a.active {
+      color: bisque; }
+    header nav a.active:hover {
+      color: coral; }
+    header nav span {
+      display: none; }
+
+header.shadow {
+  box-shadow: 0 3px 5px 1px #646464; }
+
+@media (min-width: 600px) {
+  header nav span {
+    display: inline-block; }
+  header .fa {
+    display: none; } }
+@media (min-width: 800px) {
+  header #brand {
+    line-height: 2em;
+    font-size: 2.5em; }
+  header nav a {
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 5em;
+    font-size: 1em; } }
+main {
+  overflow-y: auto;
+  height: 100%; }
+
+section {
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  margin: 0;
+  padding-top: 10em;
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: center; }
+  section > * {
+    margin-bottom: 0; }
+  section > h1 {
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-transform: uppercase; }
+  section > p {
+    padding-top: 2em;
+    line-height: 2em; }
+
+#background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+  background-image: url(../assets/icubworld-landing.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: cornflowerblue;
+  background-blend-mode: soft-light; }
+
+#landing {
+  height: 100%;
+  padding: 0;
+  background: transparent; }
+  #landing h1 {
+    font-family: "Poiret One";
+    display: inline-block;
+    color: white;
+    font-size: 5em;
+    vertical-align: middle;
+    text-transform: none; }
+
+#landing:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle; }
+
+@media (min-width: 600px) {
+  #landing h1 {
+    font-size: 8em; } }
+.row {
+  margin-top: 3em; }
+
+.thumbnail {
+  padding: 0;
+  padding-bottom: 3em;
+  position: relative; }
+
+.image {
+  padding-top: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  text-align: left;
+  border-top: 1px solid lightgray; }
+  .footer > * {
+    padding-right: 0.5em; }
+  .footer .open-modal {
+    float: right; }
+
+#about .row {
+  text-align: left; }
+#about .image {
+  padding-top: 82%; }
+#about .acquision-setup {
+  background-image: url(../assets/acquisition_setup.jpg); }
+
+#datasets .image {
+  position: relative;
+  background-image: url(../assets/transparent.png);
+  transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in;
+  padding-top: 40%; }
+  #datasets .image h3 {
+    color: white;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em; }
+#datasets .thumbnail.icub-modal {
+  border: 0; }
+  #datasets .thumbnail.icub-modal .image {
+    height: 10em;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain; }
+#datasets .icubworld-transformations {
+  background-color: forestgreen; }
+#datasets .icubworld-28 {
+  background-color: darkviolet; }
+#datasets .icubworld-1 {
+  background-color: coral; }
+#datasets .icubworld-hello {
+  background-color: royalblue; }
+#datasets .caption {
+  height: 15em;
+  overflow: auto; }
+  #datasets .caption > div {
+    overflow: hidden; }
+#datasets .thsumbnail:hover .icubworld-transformations {
+  background-color: transparent;
+  background-image: url(../assets/icubworld-transformation.png); }
+#datasets .thsumbnail:hover .icubworld-28 {
+  background-color: transparent;
+  background-image: url(../assets/icubworld28-transparent.png); }
+#datasets .thsumbnail:hover .icubworld-1 {
+  background-color: transparent;
+  background-image: url(../assets/icubworld-small-transparent.png); }
+#datasets .thsumbnail:hover .icubworld-hello {
+  background-color: transparent;
+  background-image: url(../assets/hello-icubworld-transparent.png); }
+
+#publications .thumbnail {
+  text-align: left; }
+  #publications .thumbnail h4 {
+    font-weight: bold; }
+  #publications .thumbnail .venue {
+    color: darkgray; }
+#publications .col-sm-12:nth-child(even) .thumbnail {
+  background-color: #F5F5F5; }
+#publications .bibtex-text {
+  height: 0;
+  overflow: hidden; }
+  #publications .bibtex-text pre {
+    margin-bottom: 0; }
+#publications .bibtex-text.active {
+  margin-top: 1em;
+  height: auto; }
+#publications .bibtex {
+  display: inline-block; }
+
+#people .row {
+  padding-bottom: 3em; }
+#people .thumbnail {
+  text-align: left; }
+#people .person {
+  padding: 1em;
+  background-color: cornflowerblue; }
+#people img {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 200px; }
+#people h4 {
+  font-weight: bold; }
+#people .position {
+  color: darkgray; }
+#people .caption {
+  height: 8em; }
+
+.final-footer {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #E3F2FD;
+  font-size: 14px; }
+
+.overlay {
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  background-color: black; }
+
+/*# sourceMappingURL=icubworld.css.map */

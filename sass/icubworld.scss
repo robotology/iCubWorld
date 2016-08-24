@@ -1,0 +1,655 @@
+
+
+$header-height: 5em;
+
+$logo-size: 1.3em;
+
+
+$icub-main-color:cornflowerblue;
+$icub-secondary-color: coral;
+
+
+$text-main-color: darkgray;
+$text-secondary-color: lightgray;
+
+
+$icub-headings: 'Poiret One';
+
+
+
+html {
+    margin:0; 
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+
+    height: 100%;
+}
+
+
+a:hover, a:visited { 
+    text-decoration: none;
+}
+
+header {
+    
+    
+    position: fixed;
+    
+    width: 100%;
+    z-index: 1000;
+    height: $header-height;
+    
+    background-color: $icub-main-color;
+    
+    color: white;
+
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    
+    #brand {
+        color: inherit;
+
+        display: inline-block;
+        height: 100%;
+        
+
+        line-height: $header-height/2;
+        font-size: 2em;
+
+        font-family: $icub-headings;
+        
+    }
+    
+    
+    #brand:before {
+            position: relative;
+            content: ' ';
+            background-image: url(../assets/icubworld_logo.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size:contain;
+
+            width: $logo-size;
+            height: 100%;
+            display: inline-block;
+            left: 0;
+        
+            vertical-align: top;
+    }
+    
+
+
+    
+    nav {
+        
+        
+        float: right;
+
+        a {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            display: inline-block;
+            height: 100%;
+            
+            line-height: $header-height/0.8;
+            font-size: 0.8em;
+            
+            text-align: center;
+            text-transform: uppercase;
+            color: inherit; 
+        }
+        
+
+        a:hover { 
+            color: $icub-secondary-color;
+        }
+        
+        a.active {
+//            background-color: $icub-secondary-color;
+            color: bisque;
+        }
+    
+        a.active:hover {
+//            color:white;
+            
+            color: $icub-secondary-color;
+        }
+        
+        span {
+            display: none;    
+        }
+ 
+
+    }
+    
+}
+
+
+header.shadow {
+ 
+    box-shadow: 0 3px 5px 1px rgb(100,100,100);
+        
+}
+
+
+@media(min-width:600px) {
+    
+    header {
+     
+        #brand {
+//            
+//            line-height: $header-height/2.5;
+//            font-size: 2.5em;
+//                
+        }
+        
+        
+        nav {
+            span {
+                display: inline-block;
+            }
+            
+            
+            a {
+//                padding-left: 1em;
+//                padding-right: 1em;
+            }
+        }
+        
+        .fa {
+            display: none;    
+        }
+        
+    }
+
+}
+
+@media(min-width:800px) {
+header {
+     
+       
+        #brand {
+            
+            line-height: $header-height/2.5;
+            font-size: 2.5em;
+            
+        
+            
+        }
+        
+        
+        
+        nav {
+            
+            a {
+                padding-left: 1em;
+                padding-right: 1em;
+                
+                line-height: $header-height;
+                font-size: 1em;
+            }
+            
+        }
+        
+        
+    }
+    
+}
+
+
+main {
+    overflow-y: auto;  
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    min-height: 100%;
+    
+    
+    background-color: white;
+    
+    margin: 0;
+    
+    padding-top: 2*$header-height;
+    padding-right: 10%;
+    padding-left: 10%;
+    
+    text-align: center;
+    
+    > * {
+        margin-bottom: 0;   
+    }
+    
+    > h1 {
+        margin: 0;
+        margin-bottom: 1em;
+        font-size: 3em;
+        text-transform: uppercase;
+    }
+    
+    > p {
+        padding-top: 2em;
+        line-height: 2em;
+    }
+
+    
+    
+}
+
+
+#background {
+        
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        z-index: -1000;
+        
+        background-image: url(../assets/icubworld-landing.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-attachment: fixed;
+
+        background-color: $icub-main-color;
+    
+        background-blend-mode: soft-light;
+
+}
+
+
+#landing {
+    
+    height: 100%;
+    padding: 0;
+    
+    background: transparent;
+
+    
+    
+    h1 {
+        
+        font-family: $icub-headings;
+        
+        display: inline-block;
+
+        color: white;
+        font-size: 5em;
+        vertical-align: middle;
+        
+        text-transform: none;
+    }
+}
+
+#landing:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+}
+
+
+
+@media(min-width:600px) {
+    
+    
+    #landing {
+        
+        h1 {
+            font-size: 8em;
+        }
+    }
+
+}
+
+
+
+
+
+// cards 
+
+.row {
+    margin-top: 3em;
+}
+
+
+.thumbnail {        
+    padding:0;
+    padding-bottom: 3em;
+    
+    position: relative;
+
+}
+
+
+
+.image {
+
+    padding-top: 100%;
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+
+
+.footer {
+    
+    position: absolute;
+    bottom:0;
+    left:0;
+    
+    width: 100%;
+    
+    padding: 0.5em;
+    text-align: left;
+
+    border-top: 1px solid lightgray;
+
+    > * {
+        padding-right: 0.5em;
+    }
+    
+    .open-modal {
+        float:right;
+    }
+
+}
+
+
+// About 
+
+
+#about {
+       
+    .row { 
+        text-align: left;
+    }
+    
+    .image {
+     
+        padding-top: 82%;
+        
+    }
+    
+    .acquision-setup {
+        
+        background-image: url(../assets/acquisition_setup.jpg);
+
+    }
+    
+    
+ 
+    
+}
+
+
+
+
+
+
+// Datasets 
+
+#datasets {
+    
+    .image {
+        position: relative;
+        background-image: url(../assets/transparent.png);
+        
+        transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in ;
+        
+        padding-top: 40%;
+        
+        h3 {
+            color: white;
+            margin:0;
+            text-align: left;
+            position: absolute;
+            bottom:0;
+            
+            padding-bottom: 0.5em;
+            padding-left:0.5em;
+        }
+    }
+    
+    
+    
+    .thumbnail {
+//        
+//        transition: width 2s ease-in;
+        
+    }
+    
+    .thumbnail.icub-modal {
+     
+        border: 0;
+        
+        .image {
+
+            height: 2*$header-height;
+            
+
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+   
+        
+    }
+    
+ 
+    
+    .icubworld-transformations {
+        background-color: forestgreen;
+                
+       
+    }
+    
+    
+    
+    .icubworld-28 {
+        background-color: darkviolet;
+    }
+    
+    .icubworld-1 {
+        background-color: coral;
+    }
+    
+    
+    
+    
+    .icubworld-hello {
+        background-color: royalblue;
+    }
+    
+    
+    
+    
+    .caption {
+
+        height: 15em;
+        overflow: auto;
+        
+        > div {
+            overflow: hidden;
+        }
+        
+    }
+    
+    
+    
+    .thsumbnail:hover {
+
+        .icubworld-transformations {
+            background-color: transparent;
+            background-image: url(../assets/icubworld-transformation.png);
+        }
+
+        .icubworld-28 {
+            background-color: transparent;
+            background-image: url(../assets/icubworld28-transparent.png);
+        }
+
+        .icubworld-1 {
+            background-color: transparent;
+            background-image: url(../assets/icubworld-small-transparent.png);
+        }
+        .icubworld-hello {
+            background-color: transparent;
+            background-image: url(../assets/hello-icubworld-transparent.png);
+        }   
+
+    
+    }
+    
+    
+}
+
+
+
+// publications
+
+
+#publications {
+    
+    .thumbnail {
+        text-align: left;
+        
+        
+        
+        
+        h4 {
+            font-weight: bold;
+        }
+        
+        .venue {
+            
+            color: $text-main-color;
+            
+        }
+    }
+    
+    
+    .col-sm-12:nth-child(even) .thumbnail {
+        
+        background-color: #F5F5F5;
+        
+    }
+    
+    .bibtex-text {
+        
+        height: 0;
+        overflow: hidden;
+        
+        pre {
+            margin-bottom: 0;
+            
+        }
+    }
+    
+    .bibtex-text.active {
+        margin-top:1em;
+        height: auto;
+    }
+    
+    .bibtex {
+        display: inline-block;
+    }
+}
+
+
+
+
+// people 
+
+
+#people {
+    
+    .row {
+     
+        padding-bottom: 3em;
+        
+    }
+    
+    .thumbnail {
+        
+        text-align: left;
+        
+    }
+    
+    .person {   
+        padding:1em;
+        background-color: cornflowerblue;
+        
+    }
+
+    
+    img {
+        border-radius: 50%;   
+        display:block;
+        margin:auto;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+
+
+    h4 {
+        font-weight: bold;
+    }
+    
+    .position {
+        
+        color: $text-main-color;
+       
+    }
+    
+    .caption {
+        height: 8em;   
+    }
+    
+    
+}
+
+
+
+
+.final-footer {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #E3F2FD;
+    font-size: 14px;   
+}
+
+
+
+.overlay {
+    top:0;
+    left: 0;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    
+    display: none;
+    background-color: black;
+}
+
+
