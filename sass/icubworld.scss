@@ -16,6 +16,13 @@ $text-secondary-color: lightgray;
 $icub-headings: 'Poiret One';
 
 
+$icubworld-transformations:forestgreen;
+$icubworld-28: darkviolet;
+$icubworld-1: coral;
+$icubworld-hello: royalblue;
+
+
+
 
 html {
     margin:0; 
@@ -376,6 +383,7 @@ section {
 #about {
        
     .row { 
+        padding-top: 4em;
         text-align: left;
     }
     
@@ -451,30 +459,24 @@ section {
         
     }
     
- 
     
     .icubworld-transformations {
-        background-color: forestgreen;
-                
-       
+        background-color: $icubworld-transformations;  
     }
     
-    
-    
     .icubworld-28 {
-        background-color: darkviolet;
+        background-color: $icubworld-28;
     }
     
     .icubworld-1 {
-        background-color: coral;
-    }
-    
-    
-    
+        background-color: $icubworld-1
+    } 
     
     .icubworld-hello {
-        background-color: royalblue;
+        background-color: $icubworld-hello
     }
+    
+ 
     
     
     
@@ -483,6 +485,7 @@ section {
 
         height: 15em;
         overflow: auto;
+        text-align: left;
         
         > div {
             overflow: hidden;
@@ -492,32 +495,9 @@ section {
     
     
     
-    .thsumbnail:hover {
-
-        .icubworld-transformations {
-            background-color: transparent;
-            background-image: url(../assets/icubworld-transformation.png);
-        }
-
-        .icubworld-28 {
-            background-color: transparent;
-            background-image: url(../assets/icubworld28-transparent.png);
-        }
-
-        .icubworld-1 {
-            background-color: transparent;
-            background-image: url(../assets/icubworld-small-transparent.png);
-        }
-        .icubworld-hello {
-            background-color: transparent;
-            background-image: url(../assets/hello-icubworld-transparent.png);
-        }   
-
-    
-    }
-    
-    
 }
+
+
 
 
 
@@ -623,6 +603,52 @@ section {
     }
     
     
+}
+
+
+// modals
+
+.modal-title {
+    color: white;   
+}
+
+.modal-content {
+    border-radius:0;   
+}
+
+.modal-header {
+ 
+    height: $header-height;
+    
+}
+
+#icubworld-transformations-modal {
+
+    .modal-header {
+        background-color: $icubworld-transformations;  
+    }
+}
+
+#icubworld-28-modal {
+    
+    .modal-header {
+        background-color: $icubworld-28;
+    }
+    
+}
+
+#icubworld-1-modal {
+    
+    .modal-header {
+        background-color: $icubworld-1
+    }
+} 
+
+#icubworld-hello-modal {
+    
+    .modal-header {
+        background-color: $icubworld-hello
+    }
 }
 
 

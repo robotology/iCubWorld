@@ -17,15 +17,12 @@ var headerHeight = 1.5*$('header').height();
 var landing_page = document.getElementById('background');
 var header = document.getElementsByTagName('header')[0];
 
-var min_alpha_landing = 0.3;
-var max_alpha_landing = 1.0;
-var min_alpha_header = 0.01;
-var max_alpha_header = 1.0;
-
-changeAlpha(landing_page,0,min_alpha_landing,max_alpha_landing);
-
-changeAlpha(header,0,min_alpha_header,max_alpha_header);
-
+updateAlpha();
+//
+//changeAlpha(landing_page,0,min_alpha_landing,max_alpha_landing);
+//
+//changeAlpha(header,0,min_alpha_header,max_alpha_header);
+//
 
 // Anchors corresponding to menu items
 var scrollItems = menuItems.map(function(){
@@ -74,21 +71,7 @@ $('main').scroll(function(){
          .removeClass("active").filter("[href='#"+id+"']").addClass("active");
    }
     
-    
-    var main_height = $('main').scrollTop();
-    var landing_height = $('#background').height();
-    
-    var alpha_t = main_height/(landing_height-topMenu.height())
-    
-    alpha_t = alpha_t <= 1.0? alpha_t : 1.0; 
-    
-changeAlpha(landing_page,alpha_t,min_alpha_landing,max_alpha_landing);
-    changeAlpha(header,alpha_t,min_alpha_header,max_alpha_header);
-    
-    if(alpha_t>=0.1)
-        header.classList.add('shadow');
-    else
-        header.classList.remove('shadow');
+    updateAlpha();
                 
 });
 
@@ -97,7 +80,6 @@ changeAlpha(landing_page,alpha_t,min_alpha_landing,max_alpha_landing);
 
 
 // alpha change 
-
 
 
 
@@ -113,6 +95,30 @@ function changeAlpha(object,alpha_t,min_alpha,max_alpha) {
             alpha = alpha > 1 ? (alpha / 100) : alpha;
             object.style.backgroundColor = "rgba(" + [match[0],match[1],match[2],alpha].join(',') +")";
     
+}
+
+
+
+function updateAlpha() {
+    var min_alpha_landing = 0.3;
+    var max_alpha_landing = 1.0;
+    var min_alpha_header = 0.01;
+    var max_alpha_header = 1.0;
+
+    var main_height = $('main').scrollTop();
+    var landing_height = $('#background').height();
+    
+    var alpha_t = main_height/(landing_height-topMenu.height())
+    
+    alpha_t = alpha_t <= 1.0? alpha_t : 1.0; 
+    
+changeAlpha(landing_page,alpha_t,min_alpha_landing,max_alpha_landing);
+    changeAlpha(header,alpha_t,min_alpha_header,max_alpha_header);
+    
+    if(alpha_t>=0.1)
+        header.classList.add('shadow');
+    else
+        header.classList.remove('shadow');   
 }
 
 

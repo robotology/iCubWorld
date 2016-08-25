@@ -166,6 +166,7 @@ section {
     float: right; }
 
 #about .row {
+  padding-top: 4em;
   text-align: left; }
 #about .image {
   padding-top: 82%; }
@@ -202,21 +203,10 @@ section {
   background-color: royalblue; }
 #datasets .caption {
   height: 15em;
-  overflow: auto; }
+  overflow: auto;
+  text-align: left; }
   #datasets .caption > div {
     overflow: hidden; }
-#datasets .thsumbnail:hover .icubworld-transformations {
-  background-color: transparent;
-  background-image: url(../assets/icubworld-transformation.png); }
-#datasets .thsumbnail:hover .icubworld-28 {
-  background-color: transparent;
-  background-image: url(../assets/icubworld28-transparent.png); }
-#datasets .thsumbnail:hover .icubworld-1 {
-  background-color: transparent;
-  background-image: url(../assets/icubworld-small-transparent.png); }
-#datasets .thsumbnail:hover .icubworld-hello {
-  background-color: transparent;
-  background-image: url(../assets/hello-icubworld-transparent.png); }
 
 #publications .thumbnail {
   text-align: left; }
@@ -256,6 +246,27 @@ section {
   color: darkgray; }
 #people .caption {
   height: 8em; }
+
+.modal-title {
+  color: white; }
+
+.modal-content {
+  border-radius: 0; }
+
+.modal-header {
+  height: 5em; }
+
+#icubworld-transformations-modal .modal-header {
+  background-color: forestgreen; }
+
+#icubworld-28-modal .modal-header {
+  background-color: darkviolet; }
+
+#icubworld-1-modal .modal-header {
+  background-color: coral; }
+
+#icubworld-hello-modal .modal-header {
+  background-color: royalblue; }
 
 .final-footer {
   height: 50px;
