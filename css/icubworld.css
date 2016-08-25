@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
   height: 100%; }
 
-a:hover, a:visited {
+a:hover, a:visited, a:focus {
   text-decoration: none; }
 
 header {
@@ -47,15 +47,15 @@ header {
       padding-right: 0.5em;
       display: inline-block;
       height: 100%;
-      line-height: 6.25em;
-      font-size: 0.8em;
+      line-height: 5em;
+      font-size: 1em;
       text-align: center;
       text-transform: uppercase;
       color: inherit; }
     header nav a:hover {
       color: coral; }
     header nav a.active {
-      color: bisque; }
+      color: #FFE082; }
     header nav a.active:hover {
       color: coral; }
     header nav span {
@@ -64,7 +64,7 @@ header {
 header.shadow {
   box-shadow: 0 3px 5px 1px #646464; }
 
-@media (min-width: 600px) {
+@media (min-width: 660px) {
   header nav span {
     display: inline-block; }
   header .fa {
@@ -121,19 +121,14 @@ section {
   padding: 0;
   background: transparent; }
   #landing h1 {
+    position: relative;
+    top: 40%;
     font-family: "Poiret One";
     display: inline-block;
     color: white;
     font-size: 5em;
     vertical-align: middle;
     text-transform: none; }
-
-#landing:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle; }
 
 @media (min-width: 600px) {
   #landing h1 {
