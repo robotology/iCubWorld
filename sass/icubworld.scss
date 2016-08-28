@@ -1,11 +1,10 @@
 
-
 $header-height: 5em;
 
 $logo-size: 1.3em;
 
 
-$icub-main-color:cornflowerblue;
+$icub-main-color:#3192c9;
 $icub-secondary-color: coral;
 
 
@@ -18,10 +17,8 @@ $icub-headings: 'Poiret One';
 
 $icubworld-transformations:forestgreen;
 $icubworld-28: darkviolet;
-$icubworld-1: coral;
-$icubworld-hello: royalblue;
-
-
+$icubworld-1: #ff6933;
+$icubworld-hello: crimson;
 
 
 html {
@@ -384,30 +381,47 @@ section {
 }
 
 
-// About 
+// Acquisition 
 
 
-#about {
-       
+#acquisition {
+      
+    padding-top: 1em;
+
     .row { 
-        padding-top: 4em;
+        padding-top: 0em;
         text-align: left;
     }
     
     .image {
      
-        padding-top: 82%;
-        
-    }
-    
-    .acquision-setup {
-        
-        background-image: url(../assets/acquisition_setup.jpg);
+        padding-top: 85%;
 
     }
     
-    
- 
+    .acquision-setup {
+        background-image: url(../assets/acquisition_setup.jpg);
+    }
+
+    .thumbnail {        
+        padding:0;
+        padding-bottom: 0em;
+        position: relative;
+    }
+
+    .footer {
+    position: relative;
+    }
+
+    h3 {
+            padding-bottom: 1em;
+            margin: 0;
+        }
+
+    p
+    {
+    padding-bottom:0.5em;
+    }
     
 }
 
@@ -420,13 +434,17 @@ section {
 
 #datasets {
     
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
     .image {
         position: relative;
         background-image: url(../assets/transparent.png);
         
         transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in ;
         
-        padding-top: 40%;
+        padding-top: 23%;
         
         h3 {
             color: white;
@@ -483,14 +501,9 @@ section {
         background-color: $icubworld-hello
     }
     
- 
-    
-    
-    
-    
     .caption {
 
-        height: 15em;
+        height: 10em;
         overflow: auto;
         text-align: left;
         
@@ -498,13 +511,19 @@ section {
             overflow: hidden;
         }
         
-    }
-    
-    
+    } 
     
 }
 
+// code
 
+#code {
+    
+    .row { 
+        padding-top: 0em;
+        text-align: left;
+    }
+}
 
 
 
@@ -513,35 +532,29 @@ section {
 
 #publications {
     
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
     .thumbnail {
         text-align: left;
-        
-        
-        
         
         h4 {
             font-weight: bold;
         }
         
-        .venue {
-            
+        .venue { 
             color: $text-main-color;
-            
         }
     }
     
-    
     .col-sm-12:nth-child(even) .thumbnail {
-        
         background-color: #F5F5F5;
-        
     }
     
     .bibtex-text {
-        
         height: 0;
         overflow: hidden;
-        
         pre {
             margin-bottom: 0;
             
@@ -556,6 +569,7 @@ section {
     .bibtex {
         display: inline-block;
     }
+
 }
 
 
@@ -580,7 +594,7 @@ section {
     
     .person {   
         padding:1em;
-        background-color: cornflowerblue;
+        background-color: $icub-main-color;
         
     }
 
@@ -606,12 +620,11 @@ section {
     }
     
     .caption {
-        height: 8em;   
+        height: 6em;   
     }
     
     
 }
-
 
 // modals
 
@@ -634,6 +647,44 @@ section {
     .modal-header {
         background-color: $icubworld-transformations;  
     }
+
+    .icubworldtr {
+        background-image: url(../assets/icubworld-transformation-mug-horizontal-flat.png);
+        padding-top: 49%;
+    }
+
+    .icubworldtrobj {
+        background-image: url(../assets/icubworld-transformation.png);
+        padding-top: 62%;
+    }
+
+    .row {
+        margin-top: 0em;
+        padding-bottom: 0px;
+    }
+
+    .thumbnail {
+        padding-bottom: 0em;
+    }
+
+    .table{
+        margin-bottom: 0;
+
+    >tbody>tr>td{
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        }
+
+    >tbody>tr:last-child>td{
+        border-top: 0;
+        border-bottom: 1px none #ddd;
+        }
+
+    }
+
+    h3 {
+    text-align: center;
+    }
 }
 
 #icubworld-28-modal {
@@ -641,7 +692,38 @@ section {
     .modal-header {
         background-color: $icubworld-28;
     }
-    
+
+    .image {
+    padding-top: 44%;
+    }
+
+    .icubworld28 {
+        background-image: url(../assets/icubworld28-transparent-flat.png);
+    }
+
+    .row {
+        margin-top: 0em;
+        padding-bottom: 0px;
+    }
+
+    .thumbnail {
+        padding-bottom: 0em;
+    }
+
+    .table{
+        margin-bottom: 0;
+
+    >tbody>tr>td{
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        }
+
+    >tbody>tr:last-child>td{
+        border-top: 0;
+        border-bottom: 1px none #ddd;
+        }
+
+    }
 }
 
 #icubworld-1-modal {
@@ -649,6 +731,39 @@ section {
     .modal-header {
         background-color: $icubworld-1
     }
+
+    .image {
+    padding-top: 44%;
+    }
+
+    .icubworld1 {
+        background-image: url(../assets/icubworld-small-transparent-cropped.png);
+    }
+
+    .row {
+        margin-top: 0em;
+        padding-bottom: 0px;
+    }
+
+    .thumbnail {
+        padding-bottom: 0em;
+    }
+
+    .table{
+        margin-bottom: 0;
+
+    >tbody>tr>td{
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        }
+
+    >tbody>tr:last-child>td{
+        border-top: 0;
+        border-bottom: 1px none #ddd;
+        }
+
+    }
+
 } 
 
 #icubworld-hello-modal {
@@ -656,9 +771,40 @@ section {
     .modal-header {
         background-color: $icubworld-hello
     }
+
+    .image {
+    padding-top: 44%;
+    }
+
+    .helloicubworld {
+        background-image: url(../assets/hello-icubworld-transparent-cropped.png);
+    }
+
+    .row {
+        margin-top: 0em;
+        padding-bottom: 0px;
+    }
+
+    .thumbnail {
+        padding-bottom: 0em;
+    }
+
+    .table{
+        margin-bottom: 0;
+
+    >tbody>tr>td{
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        }
+
+    >tbody>tr:last-child>td{
+        border-top: 0;
+        border-bottom: 1px none #ddd;
+        }
+
+    }
+
 }
-
-
 
 
 .final-footer {

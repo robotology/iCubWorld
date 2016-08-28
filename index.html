@@ -36,7 +36,7 @@
         
         <link rel="stylesheet" type="text/css" href='css/icubworld.css'>
         
-        
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
 
         
         
@@ -70,6 +70,12 @@
                         datasets
                     </span>    
                 </a>
+                <a href='#code'>
+                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                    <span>
+                        code
+                    </span>
+                </a>
                 <a href='#publications'>
                     <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                     <span>
@@ -101,46 +107,55 @@
                     <b>How many objects can iCub recognize? </b> This question led us in 2013 to start the iCubWorld project, with the main goal of benchmarking the development of the visual recognition capabilities of the iCub robot. The project is the result of a collaboration between the <a href="https://www.iit.it/lines/humanoid-sensing-and-perception">Istituto Italiano di Tecnologia (IIT) - iCub Facility</a>, the <a href="http://slipguru.unige.it/">University of Genoa - SlipGURU</a> research group, and the <a href="http://lcsl.mit.edu/#/home">Laboratory for Computational and Statistical Learning</a>. 
                 </p>
                 <p>
-                    iCubWorld datasets are collections of images recording the visual experience of iCub while observing objects in its typical environment, a laboratory or an office. The acquisition settings are devised to allow a natural human-robot interaction, where a teacher verbally provides the label of the object of interest and shows it to the robot, by holding it in the hand; the iCub can either track the object while the teacher moves it, or explore it by itself taking it in its hand.
+                    iCubWorld datasets are collections of images recording the visual experience of iCub while observing objects in its typical environment, a laboratory or an office. The acquisition setting is devised to allow a natural human-robot interaction, where a teacher verbally provides the label of the object of interest and shows it to the robot, by holding it in the hand; the iCub can either track the object while the teacher moves it, or take it in its hand.
                 </p>
                 <p>
-                    Since 2013, we published four iCubWorld releases of increasing size (described in detail below), aimed at investigating complementary aspects of robotic visual recognition. Indeed, these image collections allow for extensive analysis of the behaviour of recognition systems when trained in different conditions, offering a faithful and reproducible benchmark for the performance that we can expect from the real system.
+                    Since 2013, we published four iCubWorld releases of increasing size (described in detail below), aimed at investigating complementary aspects of robotic visual recognition. These image collections allow for extensive analysis of the behaviour of recognition systems when trained in different conditions, offering a faithful and reproducible benchmark for the performance that we can expect from the real system.
                 </p>
                 
-                
-                <div id='acquisition' class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-push-6">
+            </section>
+
+            <section id='acquisition'>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7 col-sm-push-5">
                         <h3>Acquisition Setup</h3>
                         <p>
-                            Images comprising iCubWorld datasets are annotated with the label of the object represented and a bounding box around it. We developed a Human-Robot-Interaction (HRI) application to acquire annotated images by exploiting the real-world robotic context. This schema allows to build large annotated datasets in a fast and natural way.
+                            Images in iCubWorld datasets are annotated with the label of the object represented and a bounding box around it. We developed a Human-Robot-Interaction (HRI) application to directly acquire annotated images by exploiting the real-world context and the interaction with the robot. This setup allows to build large annotated datasets in a fast and natural way.
                         </p>
                         <p>
 The only external supervision is in the form of a human teacher providing verbally the label of the object that is going to be acquired. The teacher approaches the robot and shows the object in his/her hand; during the acquisition, localization of the object in the visual field of the robot is performed by exploting self-supervision techniques.
                         </p>
                         <p>
-Two acquisition modalities are possible: human or robot mode. In human mode, the teacher moves the object holding it in the hand and the robot tracks it by exploiting either motion or depth cues. In robot mode, the robot takes the object in the hand and focuses on it by using knowledge of its own kinematics. We record incoming frames from the robot cameras, togheter with the information on the approximate bounding box, for a fixed time period.
-
-More detailed information on the acquisition setup can be found in our related publications.
+Two acquisition modalities are possible: human or robot mode. 
+                        </p>
+                        <p>
+<b>HUMAN MODE</b>: the teacher moves the object holding it in the hand and the robot tracks it by exploiting either motion or depth cues<br>
+<b>ROBOT MODE</b>: the robot takes the object in the hand and focuses on it by using knowledge of its own kinematics
+                        </p>
+                        <p>
+We record incoming frames from the robot cameras, togheter with the information on the bounding box.
                         </p>
 
                     </div>
 
-                    
-                    <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                    <div class="col-xs-12 col-sm-5 col-sm-pull-7">
                         <div class="thumbnail">
-                            <div class='image acquision-setup'></div>
+                            <div class='image acquision-setup'>
+                            </div>
                             <div class="caption">
                                 <div>
-                                    Example of acquisition session: a human teacher shows an object to the robot while providing verbal annotation.
+                                    Shot from an acquisition session in human mode: a teacher shows an object to the robot while providing verbal annotation.
                                 </div>
-                                
                             </div>
                             <div class='footer'>
-                                <a href=''>
+                                Tracking by motion segmentation:<a href=''>
                                     <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                                 </a>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                </div>
+                                <div class='footer'>
+                                Tracking by depth segmentation:<a href=''>
+                                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -148,19 +163,13 @@ More detailed information on the acquisition setup can be found in our related p
                     
 
                 </div>
-                
-                
-                
+                   
             </section>
             
             <section id='datasets'>
                 <h1>Datasets</h1>
                 
-                <p>
-                    iCubWorld is an ongoing project. Latest release is iCubWorld - Transformations.
-                </p>
-                
-                
+                 iCubWorld is an ongoing project. Latest release is iCubWorld Transformations.
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="thumbnail">
@@ -170,17 +179,14 @@ More detailed information on the acquisition setup can be found in our related p
                             <div class="caption">
                                 
                                 <div>
-                                    This dataset is far larger and more articulated than previous releases: beyond comprising more objects and categories, each object has been acquired while undergoing five visual transformations, in two different days. The main motivation is to provide a sufficiently large benchmark for studying how fine-tuning latest deep Convolutional Neural Networks on typical images acquired in robotics settings, and containing strong visual nuisances, affects the invariance properties gained by training on wide web data collections.
+                                    <p><b>200 objects divided into 20 categories</b></p>
+                                    <p><b>10 acquisitions (&#126 3600 images) per object</b></p>
+                                    Each object is acquired while undergoing isolated visual transformations, in order to study invariance to real-world nuisances.
                                 </div>
                                 
                             </div>
                             <div class='footer'>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
-                                </a>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                    <a href='#icubworld-transformations-modal' class='open-modal'>More Info</a>
+                                <a href='#icubworld-transformations-modal' class='open-modal'>More Info</a>
                                 </a>
                             </div>
                         </div>
@@ -192,20 +198,15 @@ More detailed information on the acquisition setup can be found in our related p
                             </div>
                             <div class="caption">
                                 
-                                <p>
-                                    The peculiarity of this dataset is that each object has been acquired on four different days: the four acquisitions differ for little changes in the environment (e.g., same room but different light). This allows for studying incremental learning techniques where the knowledge of objects can be refined with experience gained while observing them in different conditions.
-                                </p>
+                                <div>
+                                    <p><b>28 objects divided into 7 categories</b></p>
+                                    <p><b>8 acquisitions (&#126 1600 images) per object</b></p>
+                                    Each object is acquired in 4 different days, in order to study incremental learning approaches.
+                                </div>
                                 
                             </div>
                             <div class='footer'>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
-                                </a>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                </a>
-                                                                                            <a href='#icubworld-28-modal' class='open-modal'>More Info</a>
-
+                                <a href='#icubworld-28-modal' class='open-modal'>More Info</a>
                             </div>
                         </div>
                     </div>
@@ -215,21 +216,16 @@ More detailed information on the acquisition setup can be found in our related p
                                 <h3>iCubWorld 1.0</h3>
                             </div>
                             <div class="caption">
-                                <p>
-                                    This release has been devised in order to allow for testing generalization properties of recognition methods from one setting to another. Indeed, while the training set has beeen acquired in human mode, the test set is available in both modes and with different human operators.
-                                </p>
+                                <div>
+                                    <p><b>40 objects divided into 10 categories</b></p>
+                                    <p><b>1 acquisition (&#126 200 images) per object (train)</b></p>
+                                    Test objects are acquired in different conditions in order to study generalization across settings.
+                                </div>
                                 
                             </div>
                             
                             <div class='footer'>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
-                                </a>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                </a>
-                                                                                            <a href='#icubworld-1-modal' class='open-modal'>More Info</a>
-
+                                <a href='#icubworld-1-modal' class='open-modal'>More Info</a>
                             </div>
                         </div>
                     </div>
@@ -239,22 +235,16 @@ More detailed information on the acquisition setup can be found in our related p
                                 <h3>Hello iCubWorld</h3>
                             </div>
                             <div class="caption">
-                                <p>
-                                    This is the first release of iCubWorld, where we present first the developed HRI acquisition setting and perform initial benchamrking of the recognition methods employed on the iCub platform at the time.
-                                </p>
+                                <div>
+                                    <p><b>7 objects</b></p>
+                                    <p><b>4 acquisitions (&#126 2000 images) per object</b></p>
+                                    First release of iCubWorld, where we validate the acquisition setup and perform initial benchamrking of recognition methods.
+                                </div>
                                 
                             </div>
                             
                             <div class='footer'>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
-                                </a>
-                                <a href=''>
-                                    <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                </a>
-                                
-                                                                                            <a href='#icubworld-hello-modal' class='open-modal'>More Info</a>
-
+                                <a href='#icubworld-hello-modal' class='open-modal'>More Info</a>
                             </div>
                         </div>
                     </div>
@@ -263,38 +253,64 @@ More detailed information on the acquisition setup can be found in our related p
             </section>
             
     
+            <section id='code'>
+            <h1>Code</h1>
+
             
+            This section is under construction.
+            
+            <div class="row">
+            
+            <p>
+            We are working to provide as soon as possible documentation and support for the following code:
+            </p>
+            <p>
+            <ol>
+            <li>iCub application to acquire iCubWorld releases</li>
+            <li>MATLAB code to automatically format the acquired images in a directory tree (similar to the one we released for iCubWorld Transformations)</li>
+            <li>MATLAB functions providing utilities to train Caffe deep networks on arbitrary subsets of the acquired dataset, by setting model and back-propagation hyperparameters (e.g. layer learning rates, solver type) programmatically through configuration files</li>
+            </ol>
+            </p>
+            </div>
+            </section>
+
             <section id='publications'>
          
                 <h1>Publications</h1>
-            
-                <p>
-                    A list of publications related to iCubWorld.
-                </p>
                 
+                A list of publications related to iCubWorld.
+
                 <div class='row'>
-                    
-                     <div class='col-sm-12'>
-                          <div class="thumbnail">
-                              <div class='caption'>
+                     
+                    <div class='col-sm-12'>
+                        <div class="thumbnail">
+                            <div class='caption'>
                             <h4>
-                                Object Identification from Few Examples by Improving the Invariance of a Deep Convolutional Learning Network
-                                  </h4>
-                              <div class='authors'>
+                                Object Identification from Few Examples by Improving the Invariance of a Deep Convolutional Neural Network
+                            </h4>
+                            <div class='authors'>
                                 Giulia Pasquale, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale
                             </div>
                             <div class='venue'>
                                 IROS 2016 - IEEE/RSJ International Conference on Intelligent Robots and Systems. 
-                            </div>   
-                           </div>
+                            </div> 
+                               <div class='bibtex-text'>
+                                <pre>@inproceedings{Pasquale2016IROS,<br>    author={Giulia Pasquale and Carlo Ciliberto and Lorenzo Rosasco and Lorenzo Natale},<br>    booktitle={Intelligent Robots and Systems (IROS), 2016 IEEE/RJS International Conference on (to appear)},<br>    title={{Object Identification from Few Examples by Improving the Invariance of a Deep Convolutional Neural Network}},<br>    year={2016},<br>}
+                                </pre>
+                              </div>
+
+                            </div>
                             <div class="footer">
-                                <a target='_blank' href=''>
+                                <a target='_blank' href=assets/publ/object-identification-examples.pdf>
                                     <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>  
                                 </a>
+                                <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
                             </div>
                               
-                          </div>
                         </div>
+                    </div>
                 
                     
                     <div class='col-sm-12'>
@@ -311,11 +327,10 @@ More detailed information on the acquisition setup can be found in our related p
                                 MLIS 2016 - Workshop on Machine Learning for Interactive Systems, International Conference on Machine Learning (ICML).
                             </div> 
 
-                                  
-                              <div class='bibtex-text'>
-                                <pre>Insert Bibtex Here</pre>
+                            <div class='bibtex-text'>
+                                <pre>@inproceedings{Pasquale2015MLIS,<br>  author  = {Giulia Pasquale and Carlo Ciliberto and Francesca Odone and Lorenzo Rosasco and Lorenzo Natale},<br>  title   = {{Teaching iCub to recognize objects using deep Convolutional Neural Networks}},<br>  journal = {Proceedings of the 4th Workshop on Machine Learning for Interactive Systems, 32nd International Conference on Machine Learning},<br>  year    = {2015},<br>  volume  = {43},<br>  pages   = {21--25},<br>  url     = {http://www.jmlr.org/proceedings/papers/v43/pasquale15}<br>}
+                                </pre>
                               </div>
-                                  
 
                            </div>
                               
@@ -323,33 +338,11 @@ More detailed information on the acquisition setup can be found in our related p
                             <a target='_blank' href='http://www.jmlr.org/proceedings/papers/v43/pasquale15'>
                                 <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                             </a>
-                              <!-- 
+                              
                             <div class='bibtex'>
                               <a href=''>bibtex</a>
-                              
-                            </div> -->
-                            
-                          </div>
-                      </div>
-                    </div>
+                            </div>
 
-                    <div class='col-sm-12'>
-                          <div class="thumbnail">
-                              <div class='caption'>
-                              <h4>
-                                  Enabling Depth-driven Visual Attention on the iCub Humanoid Robot: Instructions for Use and New Perspectives.
-                                  </h4>
-                              <div class='authors'>
-                                Giulia Pasquale, Tanis Mar, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale 
-                              </div>
-                            <div class='venue'>
-                                Frontiers in Robotics and AI, section Humanoid Robotics, Vol. 3 Num. 35, 2016.
-                            </div> 
-                           </div>
-                          <div class="footer">
-                            <a target='_blank' href='http://journal.frontiersin.org/article/10.3389/frobt.2016.00035/full'>
-                                <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
-                            </a>
                           </div>
                       </div>
                     </div>
@@ -366,11 +359,20 @@ More detailed information on the acquisition setup can be found in our related p
                             <div class='venue'>
                                 IROS 2013 - IEEE/RSJ International Conference on Intelligent Robots and Systems.
                             </div>
+
+                            <div class='bibtex-text'>
+                                <pre>@inproceedings{Ciliberto2013IROS,<br>    author={Carlo Ciliberto and Sean Ryan Fanello and Matteo Santoro and Lorenzo Natale and Giorgio Metta and Lorenzo Rosasco},<br>    booktitle={2013 IEEE/RSJ International Conference on Intelligent Robots and Systems},<br>    title={On the impact of learning hierarchical representations for visual recognition in robotics},<br>    year={2013},<br>    pages={3759-3764},<br>    doi={10.1109/IROS.2013.6696893},<br>    ISSN={2153-0858},<br>    month={Nov}<br>}
+                                </pre>
+                              </div>
+
                            </div>
                           <div class="footer">
                             <a target='_blank' href='http://pasa.lira.dist.unige.it/pasapdf/1330_Ciliberto_etal2013.pdf'>
                                 <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                             </a>
+                            <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
                           </div>
                       </div>
                     </div>
@@ -389,11 +391,20 @@ More detailed information on the acquisition setup can be found in our related p
                             <div class='venue'>
                                 CVPR 2013 - Proceedings of IEEE Conference on Computer Vision and Pattern Recognition Workshops.
                             </div>
+
+                            <div class='bibtex-text'>
+                                <pre>@inproceedings{Fanello2013CVPRws,<br>    title = {{iCub World: Friendly Robots Help Building Good Vision Data-Sets}},<br>    year = {2013},<br>    booktitle = {2013 IEEE Conference on Computer Vision and Pattern Recognition Workshops},<br>    author = {Fanello, Sean Ryan and Ciliberto, Carlo and Santoro, Matteo and Natale, Lorenzo and Metta, Giorgio and Rosasco, Lorenzo and Odone, Francesca},<br>    doi = {10.1109/CVPRW.2013.106},<br>    month = {6},<br>    pages = {700--705}<br>}
+                                </pre>
+                              </div>
+
                            </div>
                           <div class="footer">
                             <a target='_blank' href='https://arxiv.org/abs/1306.3560'>
                                 <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                             </a>
+                            <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
                           </div>
                       </div>
                     </div>
@@ -410,15 +421,84 @@ More detailed information on the acquisition setup can be found in our related p
                             <div class='venue'>
                                 ICRA 2013 - IEEE International Conference on Robotics and Automation.
                             </div>
+
+
+                            <div class='bibtex-text'>
+                                <pre>@inproceedings{Fanello2013ICRA,<br>    author={Sean Ryan Fanello and Carlo Ciliberto and Lorenzo Natale and Giorgio Metta},<br>    booktitle={Robotics and Automation (ICRA), 2013 IEEE International Conference on},<br>     title={Weakly supervised strategies for natural object recognition in robotics},<br>    year={2013},<br>    pages={4223-4229},<br>    doi={10.1109/ICRA.2013.6631174},<br>    ISSN={1050-4729},<br>    month={May}<br>}
+                                </pre>
+                              </div>
+
                            </div>
                           <div class="footer">
-                            <a download href=''>
+                            <a download href='http://pasa.lira.dist.unige.it/pasapdf/1229_Fanello_etal2013.pdf'>
                                 <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
                             </a>
+                            <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
                           </div>
                       </div>
                     </div>
 
+                    <div class='col-sm-12'>
+                          <div class="thumbnail">
+                              <div class='caption'>
+                              <h4>
+                                  Enabling Depth-driven Visual Attention on the iCub Humanoid Robot: Instructions for Use and New Perspectives.
+                                  </h4>
+                              <div class='authors'>
+                                Giulia Pasquale, Tanis Mar, Carlo Ciliberto, Lorenzo Rosasco and Lorenzo Natale 
+                              </div>
+                            <div class='venue'>
+                                Frontiers in Robotics and AI, section Humanoid Robotics, Vol. 3 Num. 35, 2016.
+                            </div>
+
+                            <div class='bibtex-text'>
+                                <pre>@article{Pasquale2015frontiers,<br>  author={Pasquale, Giulia  and  Mar, Tanis  and  Ciliberto, Carlo  and  Rosasco, Lorenzo Andrea  and  Natale, Lorenzo},<br>  title={{Enabling Depth-driven Visual Attention on the iCub Humanoid Robot: Instructions for Use and New Perspectives.}},<br>  journal={Frontiers in Robotics and AI},<br>  volume={3},<br>  year={2016},<br>  number={35},<br>  url={http://www.frontiersin.org/humanoid_robotics/10.3389/frobt.2016.00035/abstract},<br>  doi={10.3389/frobt.2016.00035},<br>  issn={2296-9144}<br>}
+                                </pre>
+                              </div>
+
+ 
+                           </div>
+                          <div class="footer">
+                            <a target='_blank' href='http://journal.frontiersin.org/article/10.3389/frobt.2016.00035/full'>
+                                <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                            </a>
+                            <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-12'>
+                          <div class="thumbnail">
+                              <div class='caption'>
+                              <h4>
+                                  A heteroscedastic approach to independent motion detection for actuated visual sensors
+                                  </h4>
+                              <div class='authors'>
+                                Carlo Ciliberto, Sean Ryan Fanello, Lorenzo Natale and Giorgio Metta
+                              </div>
+                            <div class='venue'>
+                                IROS 2012 - IEEE/RSJ International Conference on Intelligent Robots and Systems.
+                            </div>
+
+                            <div class='bibtex-text'>
+                                <pre>@inproceedings{Ciliberto2012IROS,<br>    author={Carlo Ciliberto and Sean Ryan Fanello and Lorenzo Natale and Giorgio Metta},<br>    booktitle={2012 IEEE/RSJ International Conference on Intelligent Robots and Systems},<br>    title={A heteroscedastic approach to independent motion detection for actuated visual sensors},<br>     year={2012},<br>    pages={3907-3913},<br>     doi={10.1109/IROS.2012.6385943},<br>    ISSN={2153-0858},<br>    month={Oct},<br>}</pre>
+                              </div>
+
+                           </div>
+                          <div class="footer">
+                            <a target='_blank' href='http://pasa.lira.dist.unige.it/pasapdf/1109_Ciliberto_etal2012.pdf'>
+                                <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                            </a>
+                            <div class='bibtex'>
+                              <a href=''>bibtex</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
                     
                 </div>
          
@@ -431,10 +511,7 @@ More detailed information on the acquisition setup can be found in our related p
             <section id='people'>
                 
                 <h1>People</h1>
-         
-                <p>
                     The list of people who have worked on the iCubWorld project.
-                </p>
          
                  <div class='row'>
                     
@@ -455,13 +532,14 @@ More detailed information on the acquisition setup can be found in our related p
                                 </div>
                                 <div class='affiliation'>
                                     Istituto Italiano di Tecnologia
-                                </div>   
-                             </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='https://www.iit.it/people/giulia-pasquale'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                                </div> 
+                                <div class="footer">
+                                 <a target='_blank' href='https://www.iit.it/people/giulia-pasquale'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
+                             </div>
+
                         </div>
                      </div>
                      
@@ -485,11 +563,11 @@ More detailed information on the acquisition setup can be found in our related p
                                 
                                 </div>   
                              </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='https://scholar.google.com/citations?user=XUcUAisAAAAJ&hl=en&oi=ao'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                             <div class="footer">
+                                 <a target='_blank' href='https://scholar.google.com/citations?user=XUcUAisAAAAJ&hl=en&oi=ao'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
                         </div>
                      </div>
                      
@@ -517,11 +595,13 @@ More detailed information on the acquisition setup can be found in our related p
                                     Istituto Italiano di Tecnologia
                                 </div>   
                              </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='http://lornat75.github.io/'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+
+                             <div class="footer">
+                                 <a target='_blank' href='http://lornat75.github.io/'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
+
                         </div>
                      </div>
                      
@@ -545,11 +625,11 @@ More detailed information on the acquisition setup can be found in our related p
                                     
                                 </div>   
                              </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='http://web.mit.edu/lrosasco/www/'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                                  <div class="footer">
+                                 <a target='_blank' href='http://web.mit.edu/lrosasco/www/'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
                         </div>
                      </div>
            
@@ -572,11 +652,13 @@ More detailed information on the acquisition setup can be found in our related p
                                     Universita' degli Studi di Genova
                                 </div>   
                              </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='http://www.disi.unige.it/person/OdoneF/'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+
+                               <div class="footer">
+                                 <a target='_blank' href='http://www.disi.unige.it/person/OdoneF/'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
+
                         </div>
                      </div>
 
@@ -599,11 +681,12 @@ More detailed information on the acquisition setup can be found in our related p
                                     Istituto Italiano di Tecnologia
                                 </div>   
                              </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='https://www.iit.it/people/giorgio-metta'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+
+                             <div class="footer">
+                                 <a target='_blank' href='https://www.iit.it/people/giorgio-metta'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
                         </div>
                      </div>
                 </div>
@@ -611,9 +694,7 @@ More detailed information on the acquisition setup can be found in our related p
                             
                 <h1>Credits</h1>
          
-                <p>
                     The list of people who have supported and contributed to the iCubWorld project.
-                </p>
          
                  <div class='row'>
 
@@ -630,18 +711,19 @@ More detailed information on the acquisition setup can be found in our related p
                                 <h4>
                                     Sean Ryan Fanello
                                 </h4>
-                                  <div class='position'>
+                                <div class='position'>
                                       Researcher
                                 </div>
                                 <div class='affiliation'>
                                     Perceptive.io
-                                </div>   
-                             </div>
-                              <div class="card-actions">
-                                <a target='_blank' href='http://www.seanfanello.it/'>
-                                    <paper-icon-button icon='account-circle'></paper-icon-button>
+                                </div> 
+                                </div>
+                                <div class="footer">
+                                 <a target='_blank' href='http://www.seanfanello.it/'>
+                                    <i class="fa fa-lg fa-user" aria-hidden="true"></i>
                                 </a>
-                              </div>
+                                </div>
+
                         </div>
                      </div>
                      
@@ -659,23 +741,208 @@ More detailed information on the acquisition setup can be found in our related p
             
             
 <!--            Modals -->
-            
-        <div class="mimmo modal fade" id="icubworld-transformations-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+        <div class="modal fade" id="icubworld-transformations-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title" id="myModalLabel">iCubWorld Transformations</h3>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+      <div class="modal-body row">
+               
+        <div class="col-md-6">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                 <tr>
+                                    <td><b>No. categories</b></td>
+                                    <td>20</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. objects/category</b></td>
+                                    <td>10</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Acquisitions per object</b></td>
+                                    <td>4 isolated transf. + mixed sequence,<br>2 different days</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. frames/acquisition</b></td>
+                                    <td>150-200</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Tracking cue</b></td>
+                                    <td>Depth</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. acquired cameras</b></td>
+                                    <td>2</td>  
+                                </tr>
+                                </tbody>
+                        </table>
+                        </div>
+                        
+            </div>
+
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                            <div class='image icubworldtr'>
+                            </div>
+                            <div class="caption">
+                                <div>
+                                    Excerpts from 5 sequences acquired for a mug instance.
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+
+
+            </div>
+
+            <div class="modal-body row">
+            <div class="col-sm-12">
+
+            <p>
+            Each object was acquired in human mode (see Acquisition Section) while undergoing 4 isolated visual transformations:
+            </p>
+            </div>
+
+            <div class="col-sm-10 col-sm-push-1">
+            <div class="list-group">
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">2D ROTATION</h5>
+    <p class="list-group-item-text">The human rotated the object in front of the robot, parallel to the camera plane, keeping it at the same distance and position.
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">3D ROTATION</h5>
+    <p class="list-group-item-text">Like 2D ROTATION, but with the human applying out-of-plane rotations to the object and changing the face visible to the robot.
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">SCALING</h5>
+    <p class="list-group-item-text">The human moved the hand holding the object back and forth, thus changing the object's scale with respect to the cameras.
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">BACKGROUND CHANGE</h5>
+    <p class="list-group-item-text">The human moved in a semi-circle around the iCub, keeping approximately the same distance and pose of the object in the hand with respect to the cameras. The background changes dramatically, while the object appearance remains the same.
+    </p>
+  </li>
   </div>
+  </div>
+
+<div class="col-sm-12">
+            <p>
+            A sequence called MIX was also aquired with the human moving the object freely in front of the robot, as a person would do when showing a new item to a child. In this sequence all nuisances in all combinations can appear.
+            </p>
+            <p>
+            Two sessions were performed in different days, to collect images differing only for little changes in the environment and light condition.
+            </p>
+            <p>
+            Each acquisition lasted for 20 seconds (40 seconds for MIX), recording images of size 640x480 from left and right iCub cameras at approximately 10 fps. For each frame, the object's centroid and enclosing bounding box, provided by the depth segmentation routine, were also recorded (see related paper for details on this procedure).
+            </p>
+            <p>
+            With the images, we made available the annotation of the object's centroid and bounding box. We provide whole images and also a dataset version with images cropped around the object's centroid to a size of 256x256. For download, we splitted the dataset with whole images in 4 parts, comprising each 3-4 categories.
+            </p>
+</div>
+
+<div class="modal-body row">
+<div class="col-sm-6 col-sm-push-3">
+                        <div class="thumbnail">
+
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><b>Download whole images</b></td>
+                                    <td>
+                                        Part 1
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                        Part 2 
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a> <br>
+                                        Part 3
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                        Part 4
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download pre-cropped images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+</div>
+</div>
+
+
+<div class="col-sm-12">
+            <h3>
+            IROS 2016 subset
+            </h3>
+            <p>
+            A subset of this dataset was used in our paper presented at IROS 2016. In particular only 15 categories and in-plane transformations (2D ROTATION, SCALING, BACKGROUND CHANGE) were considered, with images cropped to 256x256.
+            </p>
+
+            <div class="thumbnail">
+                            <div class='image icubworldtrobj'>
+                            </div>
+                            <div class="caption">
+                                <div>
+                                    Example images showing the 10 object instances belonging to the 15 categories in the IROS 2016 paper.
+                                </div>
+                            </div>
+            </div>
+
+            </div>
+            </div>
+
+            <div class="modal-body row">
+               
+                <div class="col-sm-6 col-sm-push-3">
+                        <div class="thumbnail">
+
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><b>IROS 2016 paper</b></td>
+                                    <td>
+                                        <a href='assets/publ/object-identification-examples.pdf'>
+                                            <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Dataset subset used in the IROS 2016 paper</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+</div>
+</div>
+             
+        </div>
+    </div>
 </div>
             
             <div class="modal fade" id="icubworld-28-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -685,15 +952,119 @@ More detailed information on the acquisition setup can be found in our related p
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title" id="myModalLabel">iCubWorld28</h3>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      <div class="modal-body row">
+               
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                 <tr>
+                                    <td><b>No. categories</b></td>
+                                    <td>7</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. objects/category</b></td>
+                                    <td>4</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Acquisitions per object</b></td>
+                                    <td>4 different days,<br>train & test</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. frames/acquisition</b></td>
+                                    <td>150</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Tracking cue</b></td>
+                                    <td>Independent Motion</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. acquired cameras</b></td>
+                                    <td>1</td>  
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        </div>
+
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                        <div class='image icubworld28'>
+                        </div>
+                        <div class="caption">
+                                <div>
+                                    Example images from the dataset showing the 4 object instances belonging to the 7 categories.
+                                </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+            </div>
+
+            <div class="modal-body row">
+            <div class="col-md-12"> 
+            
+            <p>
+            Each object was acquired in human mode (see Acquisition Section), repeating the procedure twice to get separate train and test sequences, and 4 acquisition sessions were performed in 4 different days. Images acquired in different days differ for little changes in the environment and in the light conditions.
+            </p>
+            For each acquisition, around 150 images of size 320x240 were recorded from one iCub camera during 15-20 seconds. A square bounding box of size 128x128 was then cropped around the object. The images and their crops are available.
+            </p>
+            <p>
+            We also provide a manually segmented version of the dataset acquired on Day 4. The segmentation in this case was performed by clicking on the image and dragging a rectangular shape to enclose the object represented. We used this version to measure the recognition performance gap due to the automatic segmentation procedure based on motion with respect to an 'ideal' segmentation.
+            </p>
+            </div>
+            </div>
+
+            <div class="modal-body row">
+               
+                        <div class="col-sm-6 col-sm-push-3">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><b>Reference paper</b></td>
+                                    <td>
+                                        <a href='http://www.jmlr.org/proceedings/papers/v43/pasquale15'>
+                                            <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download cropped images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download whole images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download manually segmented images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+            </div>
+             
+        </div>
     </div>
-  </div>
 </div>
             
             <div class="modal fade" id="icubworld-1-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -703,45 +1074,212 @@ More detailed information on the acquisition setup can be found in our related p
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title" id="myModalLabel">iCubWorld 1.0</h3>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+     <div class="modal-body row">
+               
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                 <tr>
+                                    <td><b>No. categories</b></td>
+                                    <td>10</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. objects/category</b></td>
+                                    <td>4</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Acquisitions per object</b></td>
+                                    <td>human mode (train)<br>4 test sets avaialable</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. frames/acquisition</b></td>
+                                    <td>200</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Tracking cue</b></td>
+                                    <td>Independent Motion</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. acquired cameras</b></td>
+                                    <td>1</td>  
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                        <div class='image icubworld1'>
+                        </div>
+                            <div class="caption">
+                                <div>
+                                    Example images from the dataset showing object instances belonging to the 10 categories.
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+
+            </div>
+
+            <div class="modal-body row">
+            <div class="col-md-12"> 
+            <p>
+            For training, we collected 3 objects per category. Each object has been acquired in human mode (see Acquisition Section), recording 200 images of size 640x480 from one iCub camera, subsequently cropped to a bounding box of size 160x160 around the object.
+            </p>
+            <p>
+            We provide the following 4 test sets:<br>
+            <b>DEMONSTRATOR</b>: 1 known instance per category acquired in human mode with a different demonstrator with respect to the training<br>
+            <b>CATEGORIZATION</b>: 1 new instance per category acquired in the same setting as for the training<br>
+            <b>ROBOT</b>: 1 known or new instance per category acquired in robot mode (the bounding box in this case is 320x320)<br>
+            <b>BACKGROUND</b>: we select 10 images per category where the classifiers perform 99% of accuracy and provide the segmentation mask of the objects to test whether the classifier recognizes the object or the background<br>
+            </p>
+            </div>
+            </div>
+
+            <div class="modal-body row">
+               
+                        <div class="col-sm-6 col-sm-push-3">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><b>Reference paper(s)</b></td>
+                                    <td>
+                                        <a href='https://arxiv.org/abs/1306.3560'>
+                                            <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                        <a href='http://pasa.lira.dist.unige.it/pasapdf/1330_Ciliberto_etal2013.pdf'>
+                                            <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download cropped images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+            </div>
+
+        </div>
     </div>
-  </div>
 </div>
             
-            <div class="modal fade" id="icubworld-hello-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="myModalLabel">Hello iCubWorld</h3>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<div class="modal fade" id="icubworld-hello-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="myModalLabel">Hello iCubWorld</h3>
+            </div>
+
+            <div class="modal-body row">
+               
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                 <tr>
+                                    <td><b>No. categories</b></td>
+                                    <td>7</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. objects/category</b></td>
+                                    <td>1</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Acquisitions per object</b></td>
+                                    <td>human & robot mode,<br>train & test</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. frames/acquisition</b></td>
+                                    <td>500</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Tracking cue</b></td>
+                                    <td>Independent Motion</td>  
+                                </tr>
+                                <tr>
+                                    <td><b>No. acquired cameras</b></td>
+                                    <td>1</td>  
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                        <div class="col-md-6">
+                        <div class="thumbnail">
+                        <div class='image helloicubworld'>
+                        </div>
+                            <div class="caption">
+                                <div>
+                                    Example images from the dataset showing objects acquired in human and robot mode.
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+
+            </div>
+
+            <div class="modal-body row">
+            <div class="col-md-12"> 
+            <p>
+            Each object was acquired in human and robot mode (see Acquisition Section), repeating the procedure twice to get separate train and test sequences. For each acquisition, 500 images of size 320x240 were recorded from one iCub camera. A square bounding box of size 80x80 (human mode) and 160x160 (robot mode) was then cropped around the object and saved.
+            </p>
+            </div>
+            </div>
+
+            <div class="modal-body row">
+               
+                        <div class="col-sm-6 col-sm-push-3">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><b>Reference paper</b></td>
+                                    <td>
+                                        <a href='http://pasa.lira.dist.unige.it/pasapdf/1229_Fanello_etal2013.pdf'>
+                                            <i class="fa fa-lg fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download cropped images</b></td>
+                                    <td>
+                                        <a href=''>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+            </div>
+
+        </div>
     </div>
-  </div>
 </div>
-            
-            
-            
-        <script src="js/icubworld.js"></script>
-    </body>
+    
+<script src="js/icubworld.js"></script>
 
-
-
-
-
-
+</body>
 
 </html>
 
