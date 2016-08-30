@@ -25,8 +25,8 @@ header {
     color: inherit;
     display: inline-block;
     height: 100%;
-    line-height: 2.77778em;
-    font-size: 1.8em;
+    line-height: 2.5em;
+    font-size: 2em;
     font-family: "Poiret One"; }
   header #brand:before {
     position: relative;
@@ -43,8 +43,8 @@ header {
   header nav {
     float: right; }
     header nav a {
-      padding-left: 0.4em;
-      padding-right: 0.4em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
       display: inline-block;
       height: 100%;
       line-height: 5em;
@@ -62,25 +62,8 @@ header {
       display: none; }
 
 header.shadow {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 3px 5px 1px #646464; }
 
-@media (min-width: 700px) {
-  header #brand {
-    line-height: 2.5em;
-    font-size: 2em; }
-  header nav span {
-    display: inline-block; }
-  header .fa {
-    display: none; } }
-@media (min-width: 885px) {
-  header #brand {
-    line-height: 2em;
-    font-size: 2.5em; }
-  header nav a {
-    padding-left: 1em;
-    padding-right: 1em;
-    line-height: 5em;
-    font-size: 1em; } }
 main {
   overflow-y: auto;
   height: 100%; }
@@ -133,9 +116,126 @@ section {
     vertical-align: middle;
     text-transform: none; }
 
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   #landing h1 {
-    font-size: 8em; } }
+    font-size: 4em; }
+
+  header {
+    height: 2.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em; }
+    header #brand {
+      line-height: 2.5em;
+      font-size: 1em; }
+    header #brand:before {
+      line-height: 2.5em; }
+    header nav a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      line-height: 5em;
+      font-size: 0.5em; } }
+@media (min-width: 400px) {
+  #landing h1 {
+    font-size: 4em; }
+
+  header {
+    height: 3.33333em;
+    padding-left: 0.7em;
+    padding-right: 0.7em; }
+    header #brand {
+      line-height: 2.5em;
+      font-size: 1.3em; }
+    header #brand:before {
+      line-height: 2.5em; }
+    header nav a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      line-height: 5em;
+      font-size: 0.7em; } }
+@media (min-width: 550px) {
+  #landing h1 {
+    font-size: 6em; }
+
+  header {
+    height: 3.33333em;
+    padding-left: 1em;
+    padding-right: 1em; }
+    header #brand {
+      line-height: 2em;
+      font-size: 1.5em; }
+    header #brand:before {
+      line-height: 2.5em; }
+    header nav a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      line-height: 3.33333em;
+      font-size: 1em; } }
+@media (min-width: 660px) {
+  #landing h1 {
+    font-size: 6em; }
+
+  header {
+    height: 3.33333em;
+    padding-left: 1em;
+    padding-right: 1em; }
+    header #brand {
+      line-height: 2em;
+      font-size: 1.5em; }
+    header #brand:before {
+      line-height: 2.5em; }
+    header nav a {
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+      line-height: 3.84615em;
+      font-size: 0.9em; }
+    header nav span {
+      display: inline-block; }
+    header .fa {
+      display: none; } }
+@media (min-width: 800px) {
+  #landing h1 {
+    font-size: 8em; }
+
+  header {
+    height: 5em;
+    padding-left: 1em;
+    padding-right: 1em; }
+    header #brand {
+      line-height: 2em;
+      font-size: 2.5em; }
+    header #brand:before {
+      line-height: 5em; }
+    header nav a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      line-height: 5em;
+      font-size: 1em; }
+    header nav span {
+      display: inline-block; }
+    header .fa {
+      display: none; } }
+@media (min-width: 1000px) {
+  #landing h1 {
+    font-size: 8em; }
+
+  header {
+    height: 5em;
+    padding-left: 1em;
+    padding-right: 1em; }
+    header #brand {
+      line-height: 2em;
+      font-size: 2.5em; }
+    header #brand:before {
+      line-height: 5em; }
+    header nav a {
+      padding-left: 1em;
+      padding-right: 1em;
+      line-height: 5em;
+      font-size: 1em; }
+    header nav span {
+      display: inline-block; }
+    header .fa {
+      display: none; } }
 .row {
   margin-top: 3em; }
 
@@ -181,8 +281,6 @@ section {
   #acquisition h3 {
     padding-bottom: 1em;
     margin: 0; }
-  #acquisition p {
-    padding-bottom: 0.5em; }
 
 #datasets h1 {
   margin-bottom: 0.5em; }
@@ -190,7 +288,7 @@ section {
   position: relative;
   background-image: url(../assets/transparent.png);
   transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in;
-  padding-top: 35%; }
+  padding-top: 30%; }
   #datasets .image h3 {
     color: white;
     margin: 0;
@@ -215,12 +313,20 @@ section {
 #datasets .icubworld-hello {
   background-color: crimson; }
 #datasets .caption {
-  height: 10em;
+  height: 13em;
   overflow: auto;
   text-align: left; }
   #datasets .caption > div {
     overflow: hidden; }
 
+@media (min-width: 406px) {
+  #datasets .image {
+    padding-top: 15%; }
+  #datasets h3 {
+    font-size: 23px; } }
+@media (min-width: 768px) {
+  #datasets .image {
+    padding-top: 30%; } }
 #code .row {
   padding-top: 0em;
   text-align: left; }
@@ -249,7 +355,8 @@ section {
 #people .row {
   padding-bottom: 3em; }
 #people .thumbnail {
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 4.5em; }
 #people .person {
   padding: 1em;
   background-color: #3192c9; }
@@ -278,10 +385,10 @@ section {
 #icubworld-transformations-modal .modal-header {
   background-color: forestgreen; }
 #icubworld-transformations-modal .icubworldtr {
-  background-image: url(../assets/icubworld-transformation-mug-horizontal-flat.png);
+  background-image: url(../assets/icubworld-transformation-mug-horizontal-flat.jpg);
   padding-top: 49%; }
 #icubworld-transformations-modal .icubworldtrobj {
-  background-image: url(../assets/icubworld-transformation.png);
+  background-image: url(../assets/icubworld-transformation.jpg);
   padding-top: 62%; }
 #icubworld-transformations-modal .row {
   margin-top: 0em;
@@ -304,7 +411,7 @@ section {
 #icubworld-28-modal .image {
   padding-top: 44%; }
 #icubworld-28-modal .icubworld28 {
-  background-image: url(../assets/icubworld28-transparent-flat.png); }
+  background-image: url(../assets/icubworld28-transparent-flat.jpg); }
 #icubworld-28-modal .row {
   margin-top: 0em;
   padding-bottom: 0px; }

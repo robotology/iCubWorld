@@ -1,6 +1,10 @@
 <!doctype HTML>
 <html>
     
+    <title>
+    iCubWorld
+    </title>
+
     <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,7 +125,7 @@
                     <div class="col-xs-12 col-sm-7 col-sm-push-5">
                         <h3>Acquisition Setup</h3>
                         <p>
-                            Images in iCubWorld datasets are annotated with the label of the object represented and a bounding box around it. We developed a Human-Robot-Interaction (HRI) application to directly acquire annotated images by exploiting the real-world context and the interaction with the robot. This setup allows to build large annotated datasets in a fast and natural way.
+                            Images in iCubWorld datasets are annotated with the label of the object represented and a bounding box around it. We developed a Human-Robot-Interaction application to acquire annotated images by exploiting the real-world context and the interaction with the robot. This setup allows to build large annotated datasets in a fast and natural way.
                         </p>
                         <p>
 The only external supervision is in the form of a human teacher providing verbally the label of the object that is going to be acquired. The teacher approaches the robot and shows the object in his/her hand; during the acquisition, localization of the object in the visual field of the robot is performed by exploting self-supervision techniques.
@@ -129,10 +133,19 @@ The only external supervision is in the form of a human teacher providing verbal
                         <p>
 Two acquisition modalities are possible: human or robot mode. 
                         </p>
-                        <p>
-<b>HUMAN MODE</b>: the teacher moves the object holding it in the hand and the robot tracks it by exploiting either motion or depth cues<br>
-<b>ROBOT MODE</b>: the robot takes the object in the hand and focuses on it by using knowledge of its own kinematics
-                        </p>
+
+                        <div class="list-group">
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">HUMAN MODE</h5>
+    <p class="list-group-item-text">The teacher moves the object holding it in the hand and the robot tracks it by exploiting either motion or depth cues.
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">ROBOT MODE</h5>
+    <p class="list-group-item-text">The robot takes the object in the hand and focuses on it by using knowledge of its own kinematics.
+    </p>
+  </li>
+  </div>
                         <p>
 We record incoming frames from the robot cameras, togheter with the information on the bounding box.
                         </p>
@@ -842,44 +855,64 @@ We record incoming frames from the robot cameras, togheter with the information 
             Two sessions were performed in different days, to collect images differing only for little changes in the environment and light condition.
             </p>
             <p>
-            Each acquisition lasted for 20 seconds (40 seconds for MIX), recording images of size 640x480 from left and right iCub cameras at approximately 10 fps. For each frame, the object's centroid and enclosing bounding box, provided by the depth segmentation routine, were also recorded (see related paper for details on this procedure).
+            Each acquisition lasted for 20 seconds (40 seconds for MIX), recording images of size 640x480 from left and right iCub cameras at approximately 10 fps. For each frame, the object's centroid and enclosing bounding box, provided by the depth segmentation routine, were recorded (see related paper for details on this procedure) and made available with the images. Beyond full images, we release also a dataset version where the images have been cropped around the object's centroid to a size of 256x256. 
             </p>
             <p>
-            With the images, we made available the annotation of the object's centroid and bounding box. We provide whole images and also a dataset version with images cropped around the object's centroid to a size of 256x256. For download, we splitted the dataset with whole images in 4 parts, comprising each 3-4 categories.
+            The 20 acquired categories are: body lotion, book, cellphone, flower, glass, hairbrush, hair clip, mouse, mug, oven glove, pencil case, perfume, remote, ring binder, soap dispenser, soda bottle, sprayer, squeezer, sunglasses, wallet.
+            Since 5 of the 20 categories (body lotion, sprayer, squeezer, oven glove, soda bottle) were acquired in a slightly different environment condition, we release them separately. 
             </p>
+            <p>
+
+            </p>
+            
 </div>
 
 <div class="modal-body row">
-<div class="col-sm-6 col-sm-push-3">
+<div class="col-sm-8 col-sm-push-2">
                         <div class="thumbnail">
 
                             <table class="table">
                                 <tbody>
                                 <tr>
-                                    <td><b>Download whole images</b></td>
-                                    <td>
-                                        Part 1
-                                        <a href=''>
+                                    <td><b>Download full images 15 categories</b><br>Splitted in parts comprising 3-5 categories. Download the parts and put the archives content into the same folder.</td>
+                                    <td class="col-md-2">
+                                        <a href='https://data.mendeley.com/datasets/w329ngbp22/1/files/b31b42a7-1ba6-40be-9841-560d2fea6c13/iCW_fullim_15x10_part1a.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                        </a>
-                                        Part 2 
-                                        <a href=''>
+                                        </a> part1a<br>
+                                        <a href='https://data.mendeley.com/datasets/w329ngbp22/1/files/be9940aa-7fc6-4f59-8857-cb657133d803/iCW_fullim_15x10_part1b.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                        </a> <br>
-                                        Part 3
-                                        <a href=''>
+                                        </a> part1b<br>
+                                        <a href='https://data.mendeley.com/datasets/wgcdpj9pn9/1/files/849db414-2772-4388-b4f5-a67f10a4f929/iCW_fullim_15x10_part2a.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
-                                        </a>
-                                        Part 4
-                                        <a href=''>
+                                        </a> part2a<br>
+                                        <a href='https://data.mendeley.com/datasets/wgcdpj9pn9/1/files/5babd779-a85b-40b2-a27c-bca361e0cdfb/iCW_fullim_15x10_part2b.tar.gz?dl=1'>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a> part2b<br>
+                                        <a href='https://data.mendeley.com/datasets/4573pkzgtg/1/files/575f498b-8b0e-4716-8cf4-2502ba636fce/iCW_fullim_15x10_part3.tar.gz?dl=1'>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a> part3
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download full images 5 categories</b></td>
+                                    <td class="col-md-2">
+                                        <a href='https://data.mendeley.com/datasets/647wgpxs5d/1/files/1e67e907-8420-4a61-933c-30304add3cd6/iCW_fullim_5x10.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
                                 </tr>
                                 <tr>
-                                    <td><b>Download pre-cropped images</b></td>
-                                    <td>
-                                        <a href=''>
+                                    <td><b>Download cropped images 15 categories</b></td>
+                                    <td class="col-md-2">
+                                        <a href='https://data.mendeley.com/datasets/4mmxkmcsy5/1/files/c1965584-7843-473d-a19a-fed421aae22e/iCW_256x256_15x10.tar.gz?dl=1'>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </td>  
+                                </tr>
+                                <tr>
+                                    <td><b>Download cropped images 5 categories</b></td>
+                                    <td class="col-md-2">
+                                        <a href='https://data.mendeley.com/datasets/4mmxkmcsy5/1/files/540f4ea4-535c-4a70-b509-e9668f64a2cb/iCW_256x256_5x10.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
@@ -930,7 +963,7 @@ We record incoming frames from the robot cameras, togheter with the information 
                                 <tr>
                                     <td><b>Dataset subset used in the IROS 2016 paper</b></td>
                                     <td>
-                                        <a href=''>
+                                        <a href='https://data.mendeley.com/datasets/8r8pmpnpwb/1/files/b87b15c1-419b-4623-b168-5319dc7dd864/iCW_IROSversion.tar.gz?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
@@ -1034,15 +1067,19 @@ We record incoming frames from the robot cameras, togheter with the information 
                                 <tr>
                                     <td><b>Download cropped images</b></td>
                                     <td>
-                                        <a href=''>
+                                        <a href='https://data.mendeley.com/datasets/3n2vh9rdxd/1/files/9e3a79ef-18d9-4c37-b76c-0c34ead60544/iCubWorld28_128x128.zip?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
                                 </tr>
                                 <tr>
-                                    <td><b>Download whole images</b></td>
-                                    <td>
-                                        <a href=''>
+                                    <td><b>Download full images</b></td>
+                                    <td> train
+                                        <a href='https://data.mendeley.com/datasets/5txngd6td6/1/files/d3627816-1145-498b-a49c-bcf005511fc3/iCubWorld28_fullim_train.zip?dl=1'>
+                                            <i class="fa fa-lg fa-download" aria-hidden="true"></i>
+                                        </a>
+                                        test
+                                        <a href='https://data.mendeley.com/datasets/5txngd6td6/1/files/4e4f3d9b-105d-48e3-b3b5-3dfa336f6901/iCubWorld28_fullim_test.zip?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
@@ -1050,7 +1087,7 @@ We record incoming frames from the robot cameras, togheter with the information 
                                 <tr>
                                     <td><b>Download manually segmented images</b></td>
                                     <td>
-                                        <a href=''>
+                                        <a href='https://data.mendeley.com/datasets/3n2vh9rdxd/1/files/e753c684-2f63-4b78-b58a-9fa459d64d57/iCubWorld28_manual_crop_day4.zip?dl=1'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
@@ -1125,19 +1162,43 @@ We record incoming frames from the robot cameras, togheter with the information 
             </div>
 
             <div class="modal-body row">
+
             <div class="col-md-12"> 
             <p>
             For training, we collected 3 objects per category. Each object has been acquired in human mode (see Acquisition Section), recording 200 images of size 640x480 from one iCub camera, subsequently cropped to a bounding box of size 160x160 around the object.
             </p>
             <p>
-            We provide the following 4 test sets:<br>
-            <b>DEMONSTRATOR</b>: 1 known instance per category acquired in human mode with a different demonstrator with respect to the training<br>
-            <b>CATEGORIZATION</b>: 1 new instance per category acquired in the same setting as for the training<br>
-            <b>ROBOT</b>: 1 known or new instance per category acquired in robot mode (the bounding box in this case is 320x320)<br>
-            <b>BACKGROUND</b>: we select 10 images per category where the classifiers perform 99% of accuracy and provide the segmentation mask of the objects to test whether the classifier recognizes the object or the background<br>
+            We provide the following 4 test sets:
             </p>
-            </div>
-            </div>
+             </div>
+
+<div class="col-sm-10 col-sm-push-1">
+<div class="list-group">
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">DEMONSTRATOR</h5>
+    <p class="list-group-item-text">1 known instance per category acquired in human mode with a different demonstrator with respect to the training
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">CATEGORIZATION</h5>
+    <p class="list-group-item-text">1 new instance per category acquired in the same setting as for the training
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">ROBOT</h5>
+    <p class="list-group-item-text">1 known or new instance per category acquired in robot mode (the bounding box in this case is 320x320)
+    </p>
+  </li>
+  <li class="list-group-item">
+    <h5 class="list-group-item-heading">BACKGROUND</h5>
+    <p class="list-group-item-text">we select 10 images per category where the classifiers perform 99% of accuracy and provide the segmentation mask of the objects to test whether the classifier recognizes the object or the background
+    </p>
+  </li>
+ 
+  </div>
+
+</div>
+</div>
 
             <div class="modal-body row">
                
@@ -1159,7 +1220,7 @@ We record incoming frames from the robot cameras, togheter with the information 
                                 <tr>
                                     <td><b>Download cropped images</b></td>
                                     <td>
-                                        <a href=''>
+                                        <a href='http://www.icub.org/download/datasets/iCubWorld.zip'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
@@ -1260,7 +1321,7 @@ We record incoming frames from the robot cameras, togheter with the information 
                                 <tr>
                                     <td><b>Download cropped images</b></td>
                                     <td>
-                                        <a href=''>
+                                        <a href='http://www.icub.org/download/datasets/iCubWorld1.0.zip'>
                                             <i class="fa fa-lg fa-download" aria-hidden="true"></i>
                                         </a>
                                     </td>  
