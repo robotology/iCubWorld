@@ -17,7 +17,7 @@ header {
   width: 100%;
   z-index: 1000;
   height: 5em;
-  background-color: cornflowerblue;
+  background-color: #3192c9;
   color: white;
   padding-left: 1em;
   padding-right: 1em; }
@@ -25,8 +25,8 @@ header {
     color: inherit;
     display: inline-block;
     height: 100%;
-    line-height: 2.5em;
-    font-size: 2em;
+    line-height: 2.77778em;
+    font-size: 1.8em;
     font-family: "Poiret One"; }
   header #brand:before {
     position: relative;
@@ -43,8 +43,8 @@ header {
   header nav {
     float: right; }
     header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
       display: inline-block;
       height: 100%;
       line-height: 5em;
@@ -64,12 +64,15 @@ header {
 header.shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
-@media (min-width: 660px) {
+@media (min-width: 700px) {
+  header #brand {
+    line-height: 2.5em;
+    font-size: 2em; }
   header nav span {
     display: inline-block; }
   header .fa {
     display: none; } }
-@media (min-width: 800px) {
+@media (min-width: 885px) {
   header #brand {
     line-height: 2em;
     font-size: 2.5em; }
@@ -113,7 +116,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: cornflowerblue;
+  background-color: #3192c9;
   background-blend-mode: soft-light; }
 
 #landing {
@@ -160,19 +163,34 @@ section {
   .footer .open-modal {
     float: right; }
 
-#about .row {
-  padding-top: 4em;
-  text-align: left; }
-#about .image {
-  padding-top: 82%; }
-#about .acquision-setup {
-  background-image: url(../assets/acquisition_setup.jpg); }
+#acquisition {
+  padding-top: 1em; }
+  #acquisition .row {
+    padding-top: 0em;
+    text-align: left; }
+  #acquisition .image {
+    padding-top: 85%; }
+  #acquisition .acquision-setup {
+    background-image: url(../assets/acquisition_setup.jpg); }
+  #acquisition .thumbnail {
+    padding: 0;
+    padding-bottom: 0em;
+    position: relative; }
+  #acquisition .footer {
+    position: relative; }
+  #acquisition h3 {
+    padding-bottom: 1em;
+    margin: 0; }
+  #acquisition p {
+    padding-bottom: 0.5em; }
 
+#datasets h1 {
+  margin-bottom: 0.5em; }
 #datasets .image {
   position: relative;
   background-image: url(../assets/transparent.png);
   transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in;
-  padding-top: 40%; }
+  padding-top: 35%; }
   #datasets .image h3 {
     color: white;
     margin: 0;
@@ -193,16 +211,22 @@ section {
 #datasets .icubworld-28 {
   background-color: darkviolet; }
 #datasets .icubworld-1 {
-  background-color: coral; }
+  background-color: #ff6933; }
 #datasets .icubworld-hello {
-  background-color: royalblue; }
+  background-color: crimson; }
 #datasets .caption {
-  height: 15em;
+  height: 10em;
   overflow: auto;
   text-align: left; }
   #datasets .caption > div {
     overflow: hidden; }
 
+#code .row {
+  padding-top: 0em;
+  text-align: left; }
+
+#publications h1 {
+  margin-bottom: 0.5em; }
 #publications .thumbnail {
   text-align: left; }
   #publications .thumbnail h4 {
@@ -228,7 +252,7 @@ section {
   text-align: left; }
 #people .person {
   padding: 1em;
-  background-color: cornflowerblue; }
+  background-color: #3192c9; }
 #people img {
   border-radius: 50%;
   display: block;
@@ -240,7 +264,7 @@ section {
 #people .position {
   color: darkgray; }
 #people .caption {
-  height: 8em; }
+  height: 6em; }
 
 .modal-title {
   color: white; }
@@ -253,15 +277,87 @@ section {
 
 #icubworld-transformations-modal .modal-header {
   background-color: forestgreen; }
+#icubworld-transformations-modal .icubworldtr {
+  background-image: url(../assets/icubworld-transformation-mug-horizontal-flat.png);
+  padding-top: 49%; }
+#icubworld-transformations-modal .icubworldtrobj {
+  background-image: url(../assets/icubworld-transformation.png);
+  padding-top: 62%; }
+#icubworld-transformations-modal .row {
+  margin-top: 0em;
+  padding-bottom: 0px; }
+#icubworld-transformations-modal .thumbnail {
+  padding-bottom: 0em; }
+#icubworld-transformations-modal .table {
+  margin-bottom: 0; }
+  #icubworld-transformations-modal .table > tbody > tr > td {
+    border-top: 0;
+    border-bottom: 1px solid #ddd; }
+  #icubworld-transformations-modal .table > tbody > tr:last-child > td {
+    border-top: 0;
+    border-bottom: 1px none #ddd; }
+#icubworld-transformations-modal h3 {
+  text-align: center; }
 
 #icubworld-28-modal .modal-header {
   background-color: darkviolet; }
+#icubworld-28-modal .image {
+  padding-top: 44%; }
+#icubworld-28-modal .icubworld28 {
+  background-image: url(../assets/icubworld28-transparent-flat.png); }
+#icubworld-28-modal .row {
+  margin-top: 0em;
+  padding-bottom: 0px; }
+#icubworld-28-modal .thumbnail {
+  padding-bottom: 0em; }
+#icubworld-28-modal .table {
+  margin-bottom: 0; }
+  #icubworld-28-modal .table > tbody > tr > td {
+    border-top: 0;
+    border-bottom: 1px solid #ddd; }
+  #icubworld-28-modal .table > tbody > tr:last-child > td {
+    border-top: 0;
+    border-bottom: 1px none #ddd; }
 
 #icubworld-1-modal .modal-header {
-  background-color: coral; }
+  background-color: #ff6933; }
+#icubworld-1-modal .image {
+  padding-top: 44%; }
+#icubworld-1-modal .icubworld1 {
+  background-image: url(../assets/icubworld-small-transparent-cropped.png); }
+#icubworld-1-modal .row {
+  margin-top: 0em;
+  padding-bottom: 0px; }
+#icubworld-1-modal .thumbnail {
+  padding-bottom: 0em; }
+#icubworld-1-modal .table {
+  margin-bottom: 0; }
+  #icubworld-1-modal .table > tbody > tr > td {
+    border-top: 0;
+    border-bottom: 1px solid #ddd; }
+  #icubworld-1-modal .table > tbody > tr:last-child > td {
+    border-top: 0;
+    border-bottom: 1px none #ddd; }
 
 #icubworld-hello-modal .modal-header {
-  background-color: royalblue; }
+  background-color: crimson; }
+#icubworld-hello-modal .image {
+  padding-top: 44%; }
+#icubworld-hello-modal .helloicubworld {
+  background-image: url(../assets/hello-icubworld-transparent-cropped.png); }
+#icubworld-hello-modal .row {
+  margin-top: 0em;
+  padding-bottom: 0px; }
+#icubworld-hello-modal .thumbnail {
+  padding-bottom: 0em; }
+#icubworld-hello-modal .table {
+  margin-bottom: 0; }
+  #icubworld-hello-modal .table > tbody > tr > td {
+    border-top: 0;
+    border-bottom: 1px solid #ddd; }
+  #icubworld-hello-modal .table > tbody > tr:last-child > td {
+    border-top: 0;
+    border-bottom: 1px none #ddd; }
 
 .final-footer {
   height: 50px;
