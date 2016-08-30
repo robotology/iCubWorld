@@ -25,8 +25,8 @@ header {
     color: inherit;
     display: inline-block;
     height: 100%;
-    line-height: 2.5em;
-    font-size: 2em;
+    line-height: 3.33333em;
+    font-size: 1.5em;
     font-family: "Poiret One"; }
   header #brand:before {
     position: relative;
@@ -43,12 +43,12 @@ header {
   header nav {
     float: right; }
     header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
       display: inline-block;
       height: 100%;
-      line-height: 5em;
-      font-size: 1em;
+      line-height: 7.14286em;
+      font-size: 0.7em;
       text-align: center;
       text-transform: uppercase;
       color: inherit; }
@@ -62,8 +62,46 @@ header {
       display: none; }
 
 header.shadow {
-  box-shadow: 0 3px 5px 1px #646464; }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
+@media (min-width: 380px) {
+  header #brand {
+    line-height: 2.77778em;
+    font-size: 1.8em; }
+  header nav a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    line-height: 6.25em;
+    font-size: 0.8em; } }
+@media (min-width: 430px) {
+  header nav a {
+    line-height: 5em;
+    font-size: 1em; } }
+@media (min-width: 620px) {
+  header nav span {
+    display: inline-block; }
+  header nav a {
+    line-height: 6.25em;
+    font-size: 0.8em; }
+  header .fa {
+    display: none; } }
+@media (min-width: 730px) {
+  header #brand {
+    line-height: 2.5em;
+    font-size: 2em; }
+  header nav span {
+    display: inline-block; }
+  header .fa {
+    display: none; } }
+@media (min-width: 885px) {
+  header #brand {
+    line-height: 2em;
+    font-size: 2.5em; }
+  header nav a {
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 5em;
+    font-size: 1em; } }
 main {
   overflow-y: auto;
   height: 100%; }
@@ -116,126 +154,9 @@ section {
     vertical-align: middle;
     text-transform: none; }
 
-@media (min-width: 300px) {
+@media (min-width: 600px) {
   #landing h1 {
-    font-size: 4em; }
-
-  header {
-    height: 2.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em; }
-    header #brand {
-      line-height: 2.5em;
-      font-size: 1em; }
-    header #brand:before {
-      line-height: 2.5em; }
-    header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      line-height: 5em;
-      font-size: 0.5em; } }
-@media (min-width: 400px) {
-  #landing h1 {
-    font-size: 4em; }
-
-  header {
-    height: 3.33333em;
-    padding-left: 0.7em;
-    padding-right: 0.7em; }
-    header #brand {
-      line-height: 2.5em;
-      font-size: 1.3em; }
-    header #brand:before {
-      line-height: 2.5em; }
-    header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      line-height: 5em;
-      font-size: 0.7em; } }
-@media (min-width: 550px) {
-  #landing h1 {
-    font-size: 6em; }
-
-  header {
-    height: 3.33333em;
-    padding-left: 1em;
-    padding-right: 1em; }
-    header #brand {
-      line-height: 2em;
-      font-size: 1.5em; }
-    header #brand:before {
-      line-height: 2.5em; }
-    header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      line-height: 3.33333em;
-      font-size: 1em; } }
-@media (min-width: 660px) {
-  #landing h1 {
-    font-size: 6em; }
-
-  header {
-    height: 3.33333em;
-    padding-left: 1em;
-    padding-right: 1em; }
-    header #brand {
-      line-height: 2em;
-      font-size: 1.5em; }
-    header #brand:before {
-      line-height: 2.5em; }
-    header nav a {
-      padding-left: 0.25em;
-      padding-right: 0.25em;
-      line-height: 3.84615em;
-      font-size: 0.9em; }
-    header nav span {
-      display: inline-block; }
-    header .fa {
-      display: none; } }
-@media (min-width: 800px) {
-  #landing h1 {
-    font-size: 8em; }
-
-  header {
-    height: 5em;
-    padding-left: 1em;
-    padding-right: 1em; }
-    header #brand {
-      line-height: 2em;
-      font-size: 2.5em; }
-    header #brand:before {
-      line-height: 5em; }
-    header nav a {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      line-height: 5em;
-      font-size: 1em; }
-    header nav span {
-      display: inline-block; }
-    header .fa {
-      display: none; } }
-@media (min-width: 1000px) {
-  #landing h1 {
-    font-size: 8em; }
-
-  header {
-    height: 5em;
-    padding-left: 1em;
-    padding-right: 1em; }
-    header #brand {
-      line-height: 2em;
-      font-size: 2.5em; }
-    header #brand:before {
-      line-height: 5em; }
-    header nav a {
-      padding-left: 1em;
-      padding-right: 1em;
-      line-height: 5em;
-      font-size: 1em; }
-    header nav span {
-      display: inline-block; }
-    header .fa {
-      display: none; } }
+    font-size: 8em; } }
 .row {
   margin-top: 3em; }
 
@@ -282,13 +203,11 @@ section {
     padding-bottom: 1em;
     margin: 0; }
 
-#datasets h1 {
-  margin-bottom: 0.5em; }
 #datasets .image {
   position: relative;
   background-image: url(../assets/transparent.png);
   transition: width 0.2s ease-in, height 0.2s ease-in, padding-top 0.2s ease-in;
-  padding-top: 30%; }
+  padding-top: 40%; }
   #datasets .image h3 {
     color: white;
     margin: 0;
@@ -331,8 +250,6 @@ section {
   padding-top: 0em;
   text-align: left; }
 
-#publications h1 {
-  margin-bottom: 0.5em; }
 #publications .thumbnail {
   text-align: left; }
   #publications .thumbnail h4 {
