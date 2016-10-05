@@ -197,6 +197,24 @@ section {
 #about .row {
   margin-top: 2em; }
 
+.logo-bar {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .logo-bar .image {
+    padding-top: 50%; }
+  .logo-bar .iit {
+    background-image: url(../assets/logos/iit.png); }
+  .logo-bar .lcsl {
+    background-image: url(../assets/logos/lcsl_crop_resized.png); }
+  .logo-bar .unige {
+    background-image: url(../assets/logos/color_unige.png); }
+  .logo-bar .dibris {
+    background-image: url(../assets/logos/dibris-resized.png); }
+  .logo-bar .mit {
+    background-image: url(../assets/logos/mit.png); }
+  .logo-bar .cbmm {
+    background-image: url(../assets/logos/cbmm-resized.png); }
+
 #acquisition {
   padding-top: 1em; }
   #acquisition .row {
@@ -206,10 +224,6 @@ section {
     padding-top: 85%; }
   #acquisition .acquision-setup {
     background-image: url(../assets/acquisition_setup.jpg); }
-  #acquisition .thumbnail {
-    padding: 0;
-    padding-bottom: 0em;
-    position: relative; }
   #acquisition .footer {
     position: relative; }
   #acquisition h3 {

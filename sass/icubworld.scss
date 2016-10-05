@@ -483,6 +483,37 @@ section {
 
 }
 
+
+// logo bar
+.logo-bar {
+    padding-top:2em;
+    padding-bottom:2em;
+
+    .image {
+        padding-top: 50%;   
+    }
+    
+    .iit {
+        background-image:  url(../assets/logos/iit.png);
+    }
+    .lcsl {
+        background-image:  url(../assets/logos/lcsl_crop_resized.png);
+    }
+    .unige {
+        background-image:  url(../assets/logos/color_unige.png);
+    }
+    .dibris {
+        background-image:  url(../assets/logos/dibris-resized.png);
+    }
+    .mit {
+        background-image:  url(../assets/logos/mit.png);
+    }
+
+    .cbmm {
+        background-image:  url(../assets/logos/cbmm-resized.png);
+    }     
+}
+
 // Acquisition 
 
 
@@ -505,11 +536,6 @@ section {
         background-image: url(../assets/acquisition_setup.jpg);
     }
 
-    .thumbnail {        
-        padding:0;
-        padding-bottom: 0em;
-        position: relative;
-    }
 
     .footer {
     position: relative;
