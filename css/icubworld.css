@@ -184,6 +184,19 @@ section {
   .footer .open-modal {
     float: right; }
 
+#about .thumbnail {
+  padding: 0;
+  padding-bottom: 0em;
+  position: relative;
+  border: none;
+  box-shadow: none;
+  webkit-box-shadow: none; }
+#about > p {
+  padding-top: 1em;
+  line-height: 2em; }
+#about .row {
+  margin-top: 2em; }
+
 #acquisition {
   padding-top: 1em; }
   #acquisition .row {

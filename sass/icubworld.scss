@@ -461,6 +461,27 @@ section {
 
 }
 
+#about {
+    
+    .thumbnail {        
+        padding:0;
+        padding-bottom: 0em;
+        position: relative;
+        border: none;
+        box-shadow: none;
+        webkit-box-shadow: none;
+    }
+
+    > p {
+        padding-top: 1em;
+        line-height: 2em;
+    }
+
+    .row {
+        margin-top: 2em;
+    }
+
+}
 
 // Acquisition 
 
