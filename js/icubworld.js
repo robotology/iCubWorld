@@ -125,15 +125,24 @@ changeAlpha(landing_page,alpha_t,min_alpha_landing,max_alpha_landing);
 var datasets = $('#datasets .thumbnail');
 
 datasets.map(function() {
+
+    var tmp_modal = $(this).find('.open-modal').attr("href");
+    
+    $(document).ready(function() {
+
+        if(window.location.href.indexOf(tmp_modal) != -1) {
+            $(tmp_modal).modal('show');
+        }
+
+    });
+
     
     $(this).find('.open-modal').click( function (e) {
 
         var pointed_modal = $(this).attr("href");
         
         $(pointed_modal).modal('toggle');
-
-        e.preventDefault();
-
+ 
     });
              
 });
@@ -157,6 +166,7 @@ publications.map(function() {
     });
     
 });
+
 
 
 
