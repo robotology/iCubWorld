@@ -132,6 +132,15 @@ datasets.map(function() {
 
         if(window.location.href.indexOf(tmp_modal) != -1) {
             $(tmp_modal).modal('show');
+
+        
+            var offsetTop = $('main').scrollTop() + $('#datasets').offset().top;
+
+            $('main').stop().animate({ 
+              scrollTop: offsetTop
+            }, 300);
+
+            
         }
 
     });
