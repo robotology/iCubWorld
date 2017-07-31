@@ -38,11 +38,11 @@ menuItems.push($('#brand')[0]);
 menuItems.click(function(e){
     var href = $(this).attr("href");
     var offsetTop = href === "#" ? 0 : $('main').scrollTop() + $(href).offset().top;
-    
+
     if(href=="#acquisition")
         offsetTop-=headerHeight;
-    
-  $('main').stop().animate({ 
+
+  $('main').stop().animate({
       scrollTop: offsetTop
   }, 300);
 //  e.preventDefault();
@@ -53,7 +53,7 @@ $('main').scroll(function(){
    // Get container scroll position
 //   var fromTop = $('html').scrollTop()+topMenuHeight;
    var fromTop = topMenuHeight+headerHeight;
-   
+
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
      if ($(this).offset().top < fromTop)
@@ -63,38 +63,38 @@ $('main').scroll(function(){
    cur = cur[cur.length-1];
    var id = cur && cur.length ? cur[0].id : "";
    var id = cur ? cur[0].id : "";
-   
+
    if (lastId !== id) {
        lastId = id;
        // Set/remove active class
        menuItems
          .removeClass("active").filter("[href='#"+id+"']").addClass("active");
    }
-    
+
     updateAlpha();
-                
+
 });
 
 
 
 
 
-// alpha change 
+// alpha change
 
 
 
 function changeAlpha(object,alpha_t,min_alpha,max_alpha) {
-    
+
     alpha = min_alpha + alpha_t*(max_alpha-min_alpha);
-    
+
     var current_color = getComputedStyle(object).getPropertyValue("background-color");
 //            var match = /rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*\d+[\.\d+]*)*\)/g.exec(current_color);
-    
+
             var match = current_color.replace(/[^\d,]/g, '').split(',');
-    
+
             alpha = alpha > 1 ? (alpha / 100) : alpha;
             object.style.backgroundColor = "rgba(" + [match[0],match[1],match[2],alpha].join(',') +")";
-    
+
 }
 
 
@@ -107,18 +107,18 @@ function updateAlpha() {
 
     var main_height = $('main').scrollTop();
     var landing_height = $('#background').height();
-    
+
     var alpha_t = main_height/(landing_height-topMenu.height())
-    
-    alpha_t = alpha_t <= 1.0? alpha_t : 1.0; 
-    
+
+    alpha_t = alpha_t <= 1.0? alpha_t : 1.0;
+
 changeAlpha(landing_page,alpha_t,min_alpha_landing,max_alpha_landing);
     changeAlpha(header,alpha_t,min_alpha_header,max_alpha_header);
-    
+
     if(alpha_t>=0.1)
         header.classList.add('shadow');
     else
-        header.classList.remove('shadow');   
+        header.classList.remove('shadow');
 }
 
 
@@ -127,56 +127,85 @@ var datasets = $('#datasets .thumbnail');
 datasets.map(function() {
 
     var tmp_modal = $(this).find('.open-modal').attr("href");
-    
+
     $(document).ready(function() {
 
         if(window.location.href.indexOf(tmp_modal) != -1) {
             $(tmp_modal).modal('show');
 
-        
+
             var offsetTop = $('main').scrollTop() + $('#datasets').offset().top;
 
-            $('main').stop().animate({ 
+            $('main').stop().animate({
               scrollTop: offsetTop
             }, 300);
 
-            
+
         }
 
     });
 
-    
+
     $(this).find('.open-modal').click( function (e) {
 
         var pointed_modal = $(this).attr("href");
-        
+
         $(pointed_modal).modal('toggle');
- 
+
     });
-             
+
 });
 
 
 var publications = $('#publications .thumbnail');
 
 publications.map(function() {
-   
+
     var bibtex = $(this).find('.bibtex');
     var bibtex_text = $(this).find('.bibtex-text');
-    
-    
+
+
 
     $(bibtex).click(function(e) {
 
         $(bibtex_text).toggleClass('active');
-        
+
         e.preventDefault();
 
     });
-    
+
 });
 
+var releases = $('#previous-releases .thumbnail');
+
+releases.map(function() {
+
+    var tmp_modal = $(this).find('.open-modal').attr("href");
+
+    $(document).ready(function() {
+
+        if(window.location.href.indexOf(tmp_modal) != -1) {
+            $(tmp_modal).modal('show');
 
 
+            var offsetTop = $('main').scrollTop() + $('#previous-releases').offset().top;
+
+            $('main').stop().animate({
+              scrollTop: offsetTop
+            }, 300);
 
 
+        }
+
+    });
+
+
+    $(this).find('.open-modal').click( function (e) {
+
+        var pointed_modal = $(this).attr("href");
+
+        $(pointed_modal).modal('toggle');
+
+    });
+
+});
